@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.3.5/signature_pad.min.js" integrity="sha512-kw/nRM/BMR2XGArXnOoxKOO5VBHLdITAW00aG8qK4zBzcLVZ4nzg7/oYCaoiwc8U9zrnsO9UHqpyljJ8+iqYiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/d1216670ee.js" crossorigin="anonymous"></script>
+</head>
+    <div class="container">
+        <header>Registration</header>
+
+        <form action="#">
+            <div class="first form">
+                <div class="personal-details">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Last Name</label>
+                            <input name="lastName" type="text" placeholder="Enter your last name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>First Name</label>
+                            <input name="firstName" type="text" placeholder="Enter your first name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">Middle Name</label>
+                            <input name="middleName" type="text" placeholder="Enter your middle name">
+                        </div>
+
+                        <div class="check-box" style="margin: 20px 0 0 50px">
+                            <label>I have name extention</label>
+                            <input id="checkFormEXT" type="checkbox" required>
+                        </div>
+
+                        <select name="nameExtension" id="selectFormEXT" style="margin: 20px 0 0 2px" disabled>
+                            <option>JR.</option>
+                            <option>SR.</option>
+                            <option>I</option>
+                            <option>II</option>
+                            <option>III</option>
+                            <option>IV</option>
+                            <option>V</option>
+                            <option>VI</option> 
+                        </select>
+
+                        <div class="fields">
+                            <div class="input-field-small">
+                                <label for="month">Birth Month:</label>
+                                <select name="monthDOB" id="birthMonth" name="month" required>
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                            </div>
+    
+                            <div class="input-field-small">
+                                <label for="day">Day:</label>
+                                <select name="dayDOB" id="birthDay" name="day" required></select>
+                            </div>
+        
+                            <div class="input-field-small">
+                                <label for="year">Year:</label>
+                                <select name="yearDOB" id="birthYear" name="year" required></select>
+                            </div>
+    
+                            <i id="clickableAwesomeFont" style="color: rgb(51, 153, 85);" class="fa-solid fa-circle-check fa-fade" onclick="calculateAge()"></i>
+                            <span style="margin: 10px 400px 0 10px; font-size: 12px;" id="age">Click here to check your age.</span>
+    
+    
+                            <div class="input-field-big">
+                                <label  class="text-box">Birth Place:</label>
+                                <input name="birthPlace" type="text" placeholder="Enter your birth place" required>
+                            </div>
+                            
+                            <div class="input-field">
+                                <label class="text-box"> Sex:</label>
+                                <select name="gender" id="selectForm" placeholder="Sex" >
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+    
+                            <div class="input-field">
+                                <label class="text-box">Marital Status</label>
+                                <select name="gender" id="selectForm" >
+                                    <option>Single</option>
+                                    <option>Married</option>
+                                    <option>Widow/Widower</option>
+                                    <option>Seperated</option>
+                                </select>
+                            </div> 
+
+                            <div class="input-field">
+                                <label  class="text-box">Contact Number</label>
+                                <input name="contactNumber" type="tel" placeholder="Enter your contact number" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label class="text-box">Housing Condition:</label>
+                                <select name="housingCondition" id="housingCondition" onchange="enableNextSelect()">
+                                    <option value="House Owner">House Owner</option>
+                                    <option value="Rental">Rental</option>
+                                    <option value="Living Alone">Living Alone</option>
+                                    <option value="Living with Children">Living with Children</option>
+                                    <option value="Living with Relatives">Living with Relatives</option>
+                                </select>
+                            </div> 
+
+                            <div class="input-field">
+                                <label>If rental, who pays the rent: </label>
+                                <select name="rentalPayee" id="rentalPayee" disabled>
+                                    <option>Myself</option>
+                                    <option>Children</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Rental Amount:</label>
+                                <input name="rentalAmount" type="text" id="rentalAmount" disabled>
+                            </div>
+
+                        </div>
+             
+                <div class="address-details">
+                    <span class="title">Address</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label class="text-box">Region</label>
+                            <input name="region" type="text" placeholder="CALABARZON" disabled>
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">Province</label>
+                            <input name="region" type="text" placeholder="LAGUNA" disabled>
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">City</label>
+                            <input name="region" type="text" placeholder="BIÑAN CITY" disabled>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="stacked-barangay">Barangay</label>
+                            <select name="barangay" id="stacked-barangay">
+                            </select>
+                        </div>
+
+                        <div class="input-field-big">
+                            <label class="text-box">Residence (House No./Block/Lot)</label>
+                            <input name="residence" type="text" placeholder="Enter your(House No./Block/Lot)">
+                        </div>
+
+                        <div class="input-field-big">
+                            <label class="text-box">Street (Zone/Purok/Sitio) </label>
+                            <input name="street" type="text" placeholder="Enter your street">
+                        </div>
+
+                    </div>
+
+                    <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+
+                </div>
+
+
+
+            </div>
+        </form>
+    </div>
+
+    <script>
+
+        // Get references to the checkbox and select form
+        const checkbox = document.getElementById('checkFormEXT');
+        const selectForm = document.getElementById('selectFormEXT');
+    
+        // Add event listener to the checkbox
+        checkbox.addEventListener('change', function() {
+          // Enable or disable the select form based on the checkbox's checked state
+          if (checkbox.checked) {
+            selectForm.disabled = false;
+          } else {
+            selectForm.disabled = true;
+          }
+        });
+
+        //FOR RENTAL
+        function enableNextSelect() {
+            var housingCondition = document.getElementById('housingCondition');
+            var rentalPayee = document.getElementById('rentalPayee');
+            var rentalAmount = document.getElementById('rentalAmount');
+            
+            if (housingCondition.value === "Rental") {
+                rentalPayee.disabled = false;
+                rentalAmount.disabled = false;
+            } else {
+                rentalPayee.disabled = true;
+                rentalAmount.disabled = true;
+            }
+        }
+    
+        // FOR BARANGAY
+        fetch('barangays.json')
+            .then(response => response.json())
+            .then(data => {
+                var selectElement = document.getElementById("stacked-barangay");
+                data.forEach(function (item) {
+                    var option = document.createElement("option");
+                    option.value = item.value;
+                    option.textContent = item.label;
+                    selectElement.appendChild(option);
+                });
+        })
+        .catch(error => {
+            console.error('Error fetching JSON file:', error);
+        });
+
+        // FOR DATE PICKER
+        const monthSelect = document.getElementById("birthMonth");
+        const daySelect = document.getElementById("birthDay");
+        const yearSelect = document.getElementById("birthYear");
+
+        // Function to dynamically generate the options for the days based on the selected month
+        function generateDays() {
+        const month = parseInt(monthSelect.value, 10);
+        const daysInMonth = new Date(yearSelect.value, month, 0).getDate();
+        
+        daySelect.innerHTML = ""; // Clear previous options
+
+        for (let i = 1; i <= daysInMonth; i++) {
+            const option = document.createElement("option");
+            option.value = i < 10 ? "0" + i : i;
+            option.textContent = i;
+            daySelect.appendChild(option);
+        }
+        }
+
+        // Function to dynamically generate the options for the years
+        function generateYears() {
+        const currentYear = new Date().getFullYear();
+
+        yearSelect.innerHTML = ""; // Clear previous options
+
+        for (let i = currentYear; i >= currentYear - 110; i--) {
+            const option = document.createElement("option");
+            option.value = i;
+            option.textContent = i;
+            yearSelect.appendChild(option);
+        }
+        }
+
+        // Event listeners
+        monthSelect.addEventListener("change", generateDays);
+        yearSelect.addEventListener("change", generateDays);
+        
+        // Generate initial options
+        generateDays();
+        generateYears();
+
+
+        //FOR AGE CALCULATE
+        function calculateAge() {
+            var birthMonth = document.getElementById('birthMonth').value;
+            var birthDay = document.getElementById('birthDay').value;
+            var birthYear = document.getElementById('birthYear').value;
+            
+            var today = new Date();
+            var birthDate = new Date(birthYear, birthMonth - 1, birthDay);
+            
+            var age = today.getFullYear() - birthDate.getFullYear();
+            var monthDiff = today.getMonth() - birthDate.getMonth();
+            
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            
+            document.getElementById('age').textContent = age;
+        }
+
+
+    </script>
+
+    
+
+    
+
+</body>
+</html>
