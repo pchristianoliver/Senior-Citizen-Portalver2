@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.3.5/signature_pad.min.js" integrity="sha512-kw/nRM/BMR2XGArXnOoxKOO5VBHLdITAW00aG8qK4zBzcLVZ4nzg7/oYCaoiwc8U9zrnsO9UHqpyljJ8+iqYiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://kit.fontawesome.com/d1216670ee.js" crossorigin="anonymous"></script>
-    <script src="buttons.js"></script>
 </head>
     <div class="container">
         <header>Registration</header>
@@ -84,7 +83,7 @@
                         <span style="margin: 10px 400px 0 10px; font-size: 12px;" id="age">Click here to check your age.</span>
 
 
-                        <div class="input-field-big">
+                        <div class="input-field">
                             <label  class="text-box">Birth Place:</label>
                             <input name="birthPlace" type="text" placeholder="Enter your birth place" required>
                         </div>
@@ -135,13 +134,12 @@
                             <label>Rental Amount:</label>
                             <input name="rentalAmount" type="text" id="rentalAmount" disabled>
                         </div>
-                        <button class="nextBtn">
-                            <span class="btnText">Next</span>
-                            <i class="uil uil-navigator"></i>
-                        </button>
                     </div>
 
-
+                    <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
 
                 </div>              
             </div>  
@@ -309,6 +307,26 @@
             document.getElementById('age').textContent = age;
         }
         
+
+        // NEXT
+
+        const form = document.querySelector("form"),
+                nextBtn = form.querySelector(".nextBtn"),
+                backBtn = form.querySelector(".backBtn"),
+                allInput = form.querySelectorAll(".first");
+
+
+        nextBtn.addEventListener("click", ()=> {
+            allInput.forEach(input => {
+                if(input.value != ""){
+                    form.classList.add('secActive');
+                }else{
+                    form.classList.remove('secActive');
+                }
+            })
+        })
+
+        backBtn.addEventListener("click", () => form.classList.remove('secActive'));
 
     </script>
 
