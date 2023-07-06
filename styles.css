@@ -53,7 +53,7 @@ body{
 .container form{
     position: relative;
     margin-top: 16px;
-    min-height: 490px;
+    min-height: 590px;
     background-color: #fff;
     overflow: hidden;
 }
@@ -67,7 +67,7 @@ body{
 .container form .form.second{
     opacity: 1;
     pointer-events: none;
-    transform: translateX(101%);
+    transform: translateX(200%);
 }
 form.secActive .form.second{
     opacity: 1;
@@ -149,6 +149,17 @@ form .fields .input-field-big{
     margin-top: 5px;
 }
 .input-field input, select{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+}
+
+.input-field-small input, select{
     outline: none;
     font-size: 14px;
     font-weight: 400;
