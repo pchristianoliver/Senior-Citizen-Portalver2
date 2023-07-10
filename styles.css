@@ -52,10 +52,11 @@ body{
 .container form {
     position: relative;
     margin-top: 16px;
-    min-height: 590px;
+    min-height: 470px;
     background-color: #fff;
     overflow: hidden;
 }
+
 
 .container form .form {
     position: absolute;
@@ -63,38 +64,147 @@ body{
 }
 
 .container form .form.second {
-    opacity: 1;
-    pointer-events: none;
-    transform: translateX(100%);
+opacity: 1;
+pointer-events: none;
+transform: translateX(200%);
 }
 
 form.secActive .form.second {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateX(0);
+opacity: 1;
+pointer-events: auto;
+transform: translateX(0);
 }
 
 form.secActive .form.first {
-    opacity: 0;
-    pointer-events: none;
-    transform: translateX(-100%);
+opacity: 0;
+pointer-events: none;
+transform: translateX(-100%);
 }
 
 .container form .form.third {
-    opacity: 0;
-    pointer-events: none;
+opacity: 0;
+pointer-events: none;
+transform: translateX(200%);
 }
 
 form.thirdActive .form.third {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateX(0);
+opacity: 1;
+pointer-events: auto;
+transform: translateX(0);
 }
 
 form.thirdActive .form.second {
-    opacity: 0;
-    pointer-events: none;
-    transform: translateX(-100%);
+opacity: 0;
+pointer-events: none;
+transform: translateX(-100%);
+}
+
+.container form .form.fourth {
+opacity: 0;
+pointer-events: none;
+transform: translateX(200%);
+}
+
+form.fourthActive .form.fourth {
+opacity: 1;
+pointer-events: auto;
+transform: translateX(0);
+}
+
+form.fourthActive .form.third {
+opacity: 0;
+pointer-events: none;
+transform: translateX(-100%);
+}
+
+.container form .form.fifth {
+opacity: 0;
+pointer-events: none;
+transform: translateX(200%);
+}
+
+form.fifthActive .form.fifth {
+opacity: 1;
+pointer-events: auto;
+transform: translateX(0);
+}
+
+form.fifthActive .form.fourth {
+opacity: 0;
+pointer-events: none;
+transform: translateX(-100%);
+}
+
+.container form .form.sixth {
+opacity: 0;
+pointer-events: none;
+transform: translateX(200%);
+}
+
+form.sixthActive .form.sixth {
+opacity: 1;
+pointer-events: auto;
+transform: translateX(0);
+}
+
+form.sixthActive .form.fifth {
+opacity: 0;
+pointer-events: none;
+transform: translateX(-100%);
+}
+
+.container form .form.seventh {
+opacity: 0;
+pointer-events: none;
+transform: translateX(200%);
+}
+
+form.seventhActive .form.seventh {
+opacity: 1;
+pointer-events: auto;
+transform: translateX(0);
+}
+
+form.seventhActive .form.sixth {
+opacity: 0;
+pointer-events: none;
+transform: translateX(-100%);
+}
+
+.container form .form.eighth {
+opacity: 0;
+pointer-events: none;
+transform: translateX(200%);
+}
+
+form.eighthActive .form.eighth {
+opacity: 1;
+pointer-events: auto;
+transform: translateX(0);
+}
+
+form.eighthActive .form.seventh {
+opacity: 0;
+pointer-events: none;
+transform: translateX(-100%);
+}
+
+.container form .form.ninth {
+opacity: 0;
+pointer-events: none;
+transform: translateX(200%);
+}
+
+form.ninthActive .form.ninth {
+opacity: 1;
+pointer-events: auto;
+transform: translateX(0);
+}
+
+form.ninthActive .form.eighth {
+opacity: 0;
+pointer-events: none;
+transform: translateX(-100%);
 }
 
 .container form .title{
