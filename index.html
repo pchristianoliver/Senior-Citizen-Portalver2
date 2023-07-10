@@ -18,7 +18,6 @@
             <div class="form first">
                 <div class="personal-details">
                     <span class="title">Personal Details</span>
-
                     <div class="fields">
                         <div class="input-field">
                             <label>Last Name</label>
@@ -136,244 +135,223 @@
                         </div>
                     </div>
 
-                    <div class="address-details">
-                        <span class="title">Address</span>
-                        <div class="fields">
-                            <div class="input-field">
-                                <label class="text-box">Region</label>
-                                <input name="region" type="text" placeholder="CALABARZON" disabled>
-                            </div>
-    
-                            <div class="input-field">
-                                <label class="text-box">Province</label>
-                                <input name="region" type="text" placeholder="LAGUNA" disabled>
-                            </div>
-    
-                            <div class="input-field">
-                                <label class="text-box">City</label>
-                                <input name="region" type="text" placeholder="BIÑAN CITY" disabled>
-                            </div>
-    
-                            <div class="input-field">
-                                <label for="stacked-barangay">Barangay</label>
-                                <select name="barangay" id="stacked-barangay">
-                                </select>
-                            </div>
-    
-                            <div class="input-field-big">
-                                <label class="text-box">Residence (House No./Block/Lot)</label>
-                                <input name="residence" type="text" placeholder="Enter your(House No./Block/Lot)">
-                            </div>
-    
-                            <div class="input-field-big">
-                                <label class="text-box">Street (Zone/Purok/Sitio) </label>
-                                <input name="street" type="text" placeholder="Enter your street">
-                            </div>
-                        </div>
-
-                        <button class="nextBtn">
-                            <span class="btnText">Next</span>
-                            <i class="uil uil-navigator"></i>
-                        </button>
-                    </div>
-                </div>              
+                    <button type="button" class="nextBtn" onclick="nextContainer()">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div> 
+              
             </div>  
 
             <div class="form second">
-
-                <div class="family-details">
-                    <span class="title">Family Members Living with Senior Citizen</span>
-
-                    <div class="fields">
-                        <div class="input-field">
-                            <label>Child/Relative Name</label>
-                            <input name="livingWithSCName" type="text" placeholder="Relative/Child Name">
-                        </div>
-
-                        <div class="input-field">
-                            <label>Relation</label>
-                            <input name="livingWithSCRelation" type="text" placeholder="Relation" >
-                        </div>
-
-                        <div class="input-field">
-                            <label>Occupation</label>
-                            <input name="livingWithSCOccupation" type="text" placeholder="Occupation" >
-                        </div>
-
-                        <div class="input-field-small">
-                            <label>Age</label>
-                            <input name="livingWithSCAge" type="number" placeholder="Age" >
-                        </div>
-
-                        <div class="input-field-small">
-                            <label>Is Working?</label>
-                            <select name="isWorking" id="isWorking" >
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
-                            </select>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Child/Relative Name</label>
-                            <input name="livingWithSCName" type="text" placeholder="Relative/Child Name">
-                        </div>
-
-                        <div class="input-field">
-                            <label>Relation</label>
-                            <input name="livingWithSCRelation" type="text" placeholder="Relation" >
-                        </div>
-
-                        <div class="input-field">
-                            <label>Occupation</label>
-                            <input name="livingWithSCOccupation" type="text" placeholder="Occupation" >
-                        </div>
-
-                        <div class="input-field-small">
-                            <label>Age</label>
-                            <input name="livingWithSCAge" type="number" placeholder="Age" >
-                        </div>
-
-                        <div class="input-field-small">
-                            <label>Is Working?</label>
-                            <select name="isWorking" id="isWorking" >
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
-                            </select>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Child/Relative Name</label>
-                            <input name="livingWithSCName" type="text" placeholder="Relative/Child Name">
-                        </div>
-
-                        <div class="input-field">
-                            <label>Relation</label>
-                            <input name="livingWithSCRelation" type="text" placeholder="Relation" >
-                        </div>
-
-                        <div class="input-field">
-                            <label>Occupation</label>
-                            <input name="livingWithSCOccupation" type="text" placeholder="Occupation" >
-                        </div>
-
-                        <div class="input-field-small">
-                            <label>Age</label>
-                            <input name="livingWithSCAge" type="number" placeholder="Age" >
-                        </div>
-
-                        <div class="input-field-small">
-                            <label>Is Working?</label>
-                            <select name="isWorking" id="isWorking" >
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
-                            </select>
-                        </div>
-
-                    </div>
-
-                    <span class="title">Family Members not Living with Senior Citizen</span>
+                <div class="address-details">
+                    <span class="title">Address</span>
 
                     <div class="fields">
                         <div class="input-field">
-                            <label>Child/Relative Name</label>
-                            <input name="livingWithSCName" type="text" placeholder="Relative/Child Name">
+                            <label class="text-box">Region</label>
+                            <input name="region" type="text" placeholder="CALABARZON" disabled>
                         </div>
 
                         <div class="input-field">
-                            <label>Relation</label>
-                            <input name="livingWithSCRelation" type="text" placeholder="Relation" >
+                            <label class="text-box">Province</label>
+                            <input name="region" type="text" placeholder="LAGUNA" disabled>
                         </div>
 
                         <div class="input-field">
-                            <label>Occupation</label>
-                            <input name="livingWithSCOccupation" type="text" placeholder="Occupation" >
+                            <label class="text-box">City</label>
+                            <input name="region" type="text" placeholder="BIÑAN CITY" disabled>
                         </div>
 
-                        <div class="input-field-small">
-                            <label>Age</label>
-                            <input name="livingWithSCAge" type="number" placeholder="Age" >
-                        </div>
-
-                        <div class="input-field-small">
-                            <label>Is Working?</label>
-                            <select name="isWorking" id="isWorking" >
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
+                        <div class="input-field">
+                            <label for="stacked-barangay">Barangay</label>
+                            <select name="barangay" id="stacked-barangay">
                             </select>
                         </div>
 
-                        <div class="input-field">
-                            <label>Child/Relative Name</label>
-                            <input name="livingWithSCName" type="text" placeholder="Relative/Child Name">
+                        <div class="input-field-big">
+                            <label class="text-box">Residence (House No./Block/Lot)</label>
+                            <input name="residence" type="text" placeholder="Enter your(House No./Block/Lot)">
                         </div>
 
-                        <div class="input-field">
-                            <label>Relation</label>
-                            <input name="livingWithSCRelation" type="text" placeholder="Relation" >
+                        <div class="input-field-big">
+                            <label class="text-box">Street (Zone/Purok/Sitio) </label>
+                            <input name="street" type="text" placeholder="Enter your street">
                         </div>
-
-                        <div class="input-field">
-                            <label>Occupation</label>
-                            <input name="livingWithSCOccupation" type="text" placeholder="Occupation" >
-                        </div>
-
-                        <div class="input-field-small">
-                            <label>Age</label>
-                            <input name="livingWithSCAge" type="number" placeholder="Age" >
-                        </div>
-
-                        <div class="input-field-small">
-                            <label>Is Working?</label>
-                            <select name="isWorking" id="isWorking" >
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
-                            </select>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Child/Relative Name</label>
-                            <input name="livingWithSCName" type="text" placeholder="Relative/Child Name">
-                        </div>
-
-                        <div class="input-field">
-                            <label>Relation</label>
-                            <input name="livingWithSCRelation" type="text" placeholder="Relation" >
-                        </div>
-
-                        <div class="input-field">
-                            <label>Occupation</label>
-                            <input name="livingWithSCOccupation" type="text" placeholder="Occupation" >
-                        </div>
-
-                        <div class="input-field-small">
-                            <label>Age</label>
-                            <input name="livingWithSCAge" type="number" placeholder="Age" >
-                        </div>
-
-                        <div class="input-field-small">
-                            <label>Is Working?</label>
-                            <select name="isWorking" id="isWorking" >
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
-                            </select>
-                        </div>
-
                     </div>
 
-                    <div class="buttons">
-                        <div class="backBtn">
-                            <i class="uil uil-navigator"></i>
-                            <span class="btnText">Back</span>
-                        </div>
-                        
-                        <button class="sumbit">
-                            <span class="btnText">Submit</span>
-                            <i class="uil uil-navigator"></i>
-                        </button>
-                    </div>
-                    
+                    <button type="button" class="backBtn" onclick="prevContainer()">
+                        <i class="uil uil-navigator"></i>
+                        <span class="btnText">Back</span>
+                    </button>
+                    <button type="button" class="nextBtn" onclick="nextContainer()">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+
                 </div>
             </div>
+
+            <div class="form third">
+                <div class="additional-details">
+                    <div class="family-details">
+                        <span class="title">Family Members Living with Senior Citizen</span>
+    
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Child/Relative Name</label>
+                                <input name="livingWithSCName" type="text" placeholder="Relative/Child Name">
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Relation</label>
+                                <input name="livingWithSCRelation" type="text" placeholder="Relation" >
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Occupation</label>
+                                <input name="livingWithSCOccupation" type="text" placeholder="Occupation" >
+                            </div>
+    
+                            <div class="input-field-small">
+                                <label>Age</label>
+                                <input name="livingWithSCAge" type="number" placeholder="Age" >
+                            </div>
+    
+                            <div class="input-field-small">
+                                <label>Is Working?</label>
+                                <select name="isWorking" id="isWorking" >
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Child/Relative Name</label>
+                                <input name="livingWithSCName" type="text" placeholder="Relative/Child Name">
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Relation</label>
+                                <input name="livingWithSCRelation" type="text" placeholder="Relation" >
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Occupation</label>
+                                <input name="livingWithSCOccupation" type="text" placeholder="Occupation" >
+                            </div>
+    
+                            <div class="input-field-small">
+                                <label>Age</label>
+                                <input name="livingWithSCAge" type="number" placeholder="Age" >
+                            </div>
+    
+                            <div class="input-field-small">
+                                <label>Is Working?</label>
+                                <select name="isWorking" id="isWorking" >
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Child/Relative Name</label>
+                                <input name="livingWithSCName" type="text" placeholder="Relative/Child Name">
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Relation</label>
+                                <input name="livingWithSCRelation" type="text" placeholder="Relation" >
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Occupation</label>
+                                <input name="livingWithSCOccupation" type="text" placeholder="Occupation" >
+                            </div>
+    
+                            <div class="input-field-small">
+                                <label>Age</label>
+                                <input name="livingWithSCAge" type="number" placeholder="Age" >
+                            </div>
+    
+                            <div class="input-field-small">
+                                <label>Is Working?</label>
+                                <select name="isWorking" id="isWorking" >
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Child/Relative Name</label>
+                                <input name="livingWithSCName" type="text" placeholder="Relative/Child Name">
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Relation</label>
+                                <input name="livingWithSCRelation" type="text" placeholder="Relation" >
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Occupation</label>
+                                <input name="livingWithSCOccupation" type="text" placeholder="Occupation" >
+                            </div>
+    
+                            <div class="input-field-small">
+                                <label>Age</label>
+                                <input name="livingWithSCAge" type="number" placeholder="Age" >
+                            </div>
+    
+                            <div class="input-field-small">
+                                <label>Is Working?</label>
+                                <select name="isWorking" id="isWorking" >
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Child/Relative Name</label>
+                                <input name="livingWithSCName" type="text" placeholder="Relative/Child Name">
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Relation</label>
+                                <input name="livingWithSCRelation" type="text" placeholder="Relation" >
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Occupation</label>
+                                <input name="livingWithSCOccupation" type="text" placeholder="Occupation" >
+                            </div>
+    
+                            <div class="input-field-small">
+                                <label>Age</label>
+                                <input name="livingWithSCAge" type="number" placeholder="Age" >
+                            </div>
+    
+                            <div class="input-field-small">
+                                <label>Is Working?</label>
+                                <select name="isWorking" id="isWorking" >
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+    
+                        </div>         
+    
+                    <button type="button" class="backBtn" onclick="prevContainer()">
+                        <i class="uil uil-navigator"></i>
+                        <span class="btnText">Back</span>
+                    </button>
+                    <button type="submit" class="nextBtn">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div>
+            </div>
+
+
         </form>
     </div>
 
@@ -486,26 +464,45 @@
             document.getElementById('age').textContent = age;
         }
         
-
         // NEXT
 
         const form = document.querySelector("form"),
-                nextBtn = form.querySelector(".nextBtn"),
-                backBtn = form.querySelector(".backBtn"),
-                allInput = form.querySelectorAll(".first");
+            nextBtn = form.querySelector(".nextBtn"),
+            backBtn = form.querySelector(".backBtn"),
+            allInput = form.querySelectorAll(".first"),
+            thirdForm = form.querySelector(".third");
 
-
-        nextBtn.addEventListener("click", ()=> {
+        nextBtn.addEventListener("click", () => {
             allInput.forEach(input => {
-                if(input.value != ""){
+                if (input.value != "") {
                     form.classList.add('secActive');
-                }else{
+                } else {
                     form.classList.remove('secActive');
                 }
             })
         })
 
-        backBtn.addEventListener("click", () => form.classList.remove('secActive'));
+        backBtn.addEventListener("click", () => {
+            form.classList.remove('secActive');
+            form.classList.remove('thirdActive');
+        });
+
+        function nextContainer() {
+            if (form.classList.contains('secActive')) {
+                form.classList.remove('secActive');
+                form.classList.add('thirdActive');
+            }
+        }
+
+        function prevContainer() {
+            if (form.classList.contains('thirdActive')) {
+                form.classList.remove('thirdActive');
+                form.classList.add('secActive');
+            } else if (form.classList.contains('secActive')) {
+                form.classList.remove('secActive');
+            }
+        }
+
 
     </script>
 
