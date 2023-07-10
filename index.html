@@ -180,10 +180,11 @@
                         </div>
                     </div>
 
-                    <button type="button" class="backBtn" onclick="prevContainer()">
+                    <button type="button" class="backBtn">
                         <i class="uil uil-navigator"></i>
                         <span class="btnText">Back</span>
                     </button>
+
                     <button type="button" class="nextBtn2">
                         <span class="btnText">Next</span>
                         <i class="uil uil-navigator"></i>
@@ -822,6 +823,11 @@
                         </div>
                     </div>
 
+                    <span class="semi-title">6. List of Maintenance Medicines</span>
+                    <div class="fields">
+                        <textarea name="Message" rows="3" placeholder="Type here"></textarea>     
+                    </div>
+
                     <button type="button" class="backBtn7">
                         <i class="uil uil-navigator"></i>
                         <span class="btnText">Back</span>
@@ -834,6 +840,26 @@
 
                 </div>
        
+            </div>
+
+            <div class="form ninth">
+                <div class="ideas-and-suggestions">
+                    <span class="title">IDEAS and SUGGESTIONS</span>
+                    <span class="semi-title">Give your ideas and suggestions for a much better implementation of Senior Citizen related programs</span>
+                    <div class="fields">
+                        <textarea name="Message" rows="5" placeholder="Type here"></textarea>     
+                    </div>
+
+                    <button type="button" class="backBtn8">
+                        <i class="uil uil-navigator"></i>
+                        <span class="btnText">Back</span>
+                    </button>
+                    
+                    <button type="button" class="submitBtn">
+                        <span class="btnText">Submit</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div>
             </div>
         </form>
     </div>
@@ -983,6 +1009,7 @@
             backBtn5 = form.querySelector(".backBtn5"),
             backBtn6 = form.querySelector(".backBtn6"),
             backBtn7 = form.querySelector(".backBtn7"),
+            backBtn8 = form.querySelector(".backBtn8"),
 
             nextBtn2 = form.querySelector(".nextBtn2"),
             nextBtn3 = form.querySelector(".nextBtn3"),
@@ -1102,6 +1129,10 @@
         });
 
         backBtn7.addEventListener("click", () => {
+            form.classList.remove('eighthActive');   
+        });
+
+        backBtn8.addEventListener("click", () => {
             form.classList.remove('eighthActive');   
         });
 
