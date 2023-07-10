@@ -52,7 +52,7 @@ body{
 .container form {
     position: relative;
     margin-top: 16px;
-    min-height: 470px;
+    min-height: 570px;
     background-color: #fff;
     overflow: hidden;
 }
@@ -61,6 +61,8 @@ body{
 .container form .form {
     position: absolute;
     background-color: #fff;
+    transition: .8s ease;
+
 }
 
 .container form .form.second {
@@ -216,6 +218,13 @@ transform: translateX(-100%);
     color: #333;
 }
 
+.container form .semi-title{
+    display: block;
+    font-size: 16px;
+    margin: 15px 0 0 0;
+    font-weight: 300;
+    color: #333;
+}
 .container form .fields{
     display: flex;
     align-items: center;
@@ -274,6 +283,19 @@ form .fields .input-field-big{
     width: 120px;
     font-style: italic;
     margin-top: 5px;
+}
+
+.check-box-1{
+    margin: 10px 0 0 10px;
+}
+
+
+.check-box-1 label{
+    font-weight: 400;
+    font-size: 14px;
+    float: right;
+    width: 120px;
+    font-style:oblique;
 }
 .input-field input, select{
     outline: none;
@@ -334,14 +356,14 @@ form .fields .input-field-big{
     cursor: pointer;
 }
 
-.backBtn{
+.backBtn, .backBtn2, .backBtn3, .backBtn4, .backBtn5, .backBtn6, .backBtn7{
     float: left;
 }
 
-.nextBtn{
+.nextBtn, .nextBtn2, .nextBtn3, .nextBtn4, .nextBtn5, .nextBtn6, .nextBtn7, .nextBtn8{
     float: right;
 }
-
+/*  */
 .container form .btnText{
     font-size: 14px;
     font-weight: 400;
@@ -352,7 +374,7 @@ form button:hover{
 form button i, form .backBtn i{
     margin: 0 6px;
 }
-form .backBtn i{
+form .backBtn i, .backBtn2 i, .backBtn3 i, .backBtn4 i, .backBtn5 i, .backBtn6 i, .backBtn7 i{
     transform: rotate(180deg);
 }
 form .buttons{

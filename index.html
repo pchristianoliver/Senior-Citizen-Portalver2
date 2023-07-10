@@ -10,48 +10,6 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.3.5/signature_pad.min.js" integrity="sha512-kw/nRM/BMR2XGArXnOoxKOO5VBHLdITAW00aG8qK4zBzcLVZ4nzg7/oYCaoiwc8U9zrnsO9UHqpyljJ8+iqYiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://kit.fontawesome.com/d1216670ee.js" crossorigin="anonymous"></script>
-    <style>
-        .container form .form {
-        position: absolute;
-        background-color: #fff;
-        }
-
-        .container form .form.second {
-        opacity: 1;
-        pointer-events: none;
-        transform: translateX(200%);
-        }
-
-        form.secActive .form.second {
-        opacity: 1;
-        pointer-events: auto;
-        transform: translateX(0);
-        }
-
-        form.secActive .form.first {
-        opacity: 0;
-        pointer-events: none;
-        transform: translateX(-100%);
-        }
-
-        .container form .form.third {
-        opacity: 0;
-        pointer-events: none;
-        transform: translateX(200%);
-        }
-
-        form.thirdActive .form.third {
-        opacity: 1;
-        pointer-events: auto;
-        transform: translateX(0);
-        }
-
-        form.thirdActive .form.second {
-        opacity: 0;
-        pointer-events: none;
-        transform: translateX(-100%);
-        }
-    </style>
 </head>
     <div class="container">
         <header>Registration</header>
@@ -226,7 +184,7 @@
                         <i class="uil uil-navigator"></i>
                         <span class="btnText">Back</span>
                     </button>
-                    <button type="button" class="nextBtn" onclick="nextContainer()">
+                    <button type="button" class="nextBtn2">
                         <span class="btnText">Next</span>
                         <i class="uil uil-navigator"></i>
                     </button>
@@ -381,11 +339,11 @@
 
                     </div>  
 
-                    <button type="button" class="backBtn" onclick="prevContainer()">
+                    <button type="button" class="backBtn2">
                         <i class="uil uil-navigator"></i>
                         <span class="btnText">Back</span>
                     </button>
-                    <button type="button" class="nextBtn" onclick="nextContainer()">
+                    <button type="button" class="nextBtn3">
                         <span class="btnText">Next</span>
                         <i class="uil uil-navigator"></i>
                     </button>
@@ -394,7 +352,7 @@
 
             <div class="form fourth">
                 <div class="family-details">
-                    <span class="title">Family Members <strong><u>NOT Living</u></strong> with Senior Citizen</span>
+                    <span class="title">Family Members <u><strong>NOT</strong></u> Living with Senior Citizen</span>
 
                     <div class="fields">
                         <div class="input-field">
@@ -539,11 +497,11 @@
 
                     </div>  
 
-                    <button type="button" class="backBtn" onclick="prevContainer()">
+                    <button type="button" class="backBtn3">
                         <i class="uil uil-navigator"></i>
                         <span class="btnText">Back</span>
                     </button>
-                    <button type="button" class="nextBtn" onclick="nextContainer()">
+                    <button type="button" class="nextBtn4">
                         <span class="btnText">Next</span>
                         <i class="uil uil-navigator"></i>
                     </button>
@@ -634,30 +592,259 @@
                         </div>
                     </div>
 
-                    <button type="button" class="backBtn" onclick="prevContainer()">
+                    <button type="button" class="backBtn4">
                         <i class="uil uil-navigator"></i>
                         <span class="btnText">Back</span>
                     </button>
-                    <button type="button" class="nextBtn" onclick="nextContainer()">
+                    <button type="button" class="nextBtn5">
                         <span class="btnText">Next</span>
                         <i class="uil uil-navigator"></i>
                     </button>
                     
                 </div>
 
-                
             </div>
 
+            <div class="form sixth">
+                <div class="present-source-income">
+                    <span class="title">Present Source/s of Income</span>
+                    <span class="semi-title">What kind of pension do you have?</span>
+                    <div class="fields">
+                        
+                        <div class="check-box-1" >
+                            <label>Pensioner</label>
+                            <input id="checkFormEXT" type="checkbox">
+                        </div>
+                        <div class="check-box-1" >
+                            <label>Non-Pensioner</label>
+                            <input id="checkFormEXT" type="checkbox">
+                        </div>
+                        <div class="check-box-1" >
+                            <label>SSS Pensioner</label>
+                            <input id="checkFormEXT" type="checkbox">
+                        </div>
+                        <div class="check-box-1">
+                            <label>GSIS     Pensioner</label>
+                            <input id="checkFormEXT" type="checkbox">
+                        </div>
+                    </div>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Nature of Employment/Business</label>
+                            <input name="nature-employment-business" type="text" placeholder="Nature of Employment/Business">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Estimated Capital</label>
+                            <input name="estimated-captial" type="text" placeholder="Estimated Capital">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Estimated Monthly Sales</label>
+                            <input name="estimated-monthly-sales" type="text" placeholder="Estimated Monthly Sales">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Estimated Monthly Income</label>
+                            <input name="estimated-monthly-income" type="text" placeholder="Estimated Monthly Income">
+                        </div>
+                    </div>
+
+                    <span class="semi-title">Financially support from:</span>
+                    <div class="fields">
+                        
+                        <div class="check-box-1" >
+                            <label>Children</label>
+                            <input id="checkFormSupportChildren" type="checkbox">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Estimated Monthly Support</label>
+                            <input id="estimated-monthly-support-children" name="estimated-monthly-support-children" type="text" placeholder="Estimated Monthly Income" disabled>
+                        </div>  
+                        
+                    </div>
+
+                    <div class="fields">
+
+                        <div class="check-box-1" >
+                            <label>Others</label>
+                            <input id="checkFormSupportOther" type="checkbox" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Estimated Monthly Support</label>
+                            <input id="estimated-monthly-support-other" name="estimated-monthly-support-other" type="text" placeholder="Estimated Monthly Sales" disabled>
+                        </div>
+
+                    </div>
+
+                    <button type="button" class="backBtn5">
+                        <i class="uil uil-navigator"></i>
+                        <span class="btnText">Back</span>
+                    </button>
+                    <button type="button" class="nextBtn6">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                    
+                </div>
+            </div>
+
+            <div class="form seventh">
+                <div class="social-pension">
+                    <span class="title">Indigent Social Pension Program</span>
+                    <span class="semi-title">Are you a recepient/beneficiary of indigent Social Pension Program?</span>
+                    <div class="fields">
+                        <div class="check-box-1">
+                            <input value="yes" id="socialPensionYes" name="social-pension" type="radio" >
+                            <label>Yes</label>                   
+                        </div>
+                        <div class="check-box-1">
+                            <input value="no" id="socialPensionNo" name="social-pension" type="radio" >
+                            <label>No</label>
+                        </div>
+
+                    </div>
+
+                    <span class="semi-title">If YES, which Indigent Social Pension Program?</span>
+                    <div class="fields">
+                        <div class="check-box-1">
+                            <label>National</label>
+                            <input value="national" id="socialPensionNational" name="YesSocialPension" type="radio" >
+                        </div>
+
+                        <div class="check-box-1">
+                            <label>LGU Local</label>
+                            <input value="lgu-local" id="socialPensionLocal" name="YesSocialPension" type="radio" >
+                        </div>
+                    </div>
+
+                    <button type="button" class="backBtn6">
+                        <i class="uil uil-navigator"></i>
+                        <span class="btnText">Back</span>
+                    </button>
+                    <button type="button" class="nextBtn7">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+
+                </div>
+       
+            </div>
+
+            <div class="form eighth">
+                <div class="health-wellness">
+                    <span class="title">Health and Wellness Condition</span>
+                    <span class="semi-title">1. Type of Illness: </span>
+                    <div class="fields">
+                        <div class="check-box-1">
+                            <input value="Diabetes" type="checkbox" >
+                            <label>Diabetes</label>                   
+                        </div>
+                        <div class="check-box-1">
+                            <input value="Hypertension"  type="checkbox" >
+                            <label>Hypertension</label>
+                        </div>
+                        <div class="check-box-1">
+                            <input value="Asthma"  type="checkbox" >
+                            <label>Asthma</label>
+                        </div>
+                        <div class="check-box-1">
+                            <input value="Athritis" type="checkbox" >
+                            <label>Athritis</label>
+                        </div>
+
+                        <div class="check-box-1">
+                            <input value="Others" type="checkbox" >
+                            <label>Others</label>
+                        </div>
+                    </div>
+
+                    <span class="semi-title">2. Are you a Philhealth member?</span>
+                    <div class="fields">
+                        
+                        <div class="check-box-1">
+                            <input value="yes" id="socialPensionYes" name="philheath-member" type="radio" >
+                            <label>Yes</label>                   
+                        </div>
+                        <div class="check-box-1">
+                            <input value="no" id="socialPensionNo" name="philheath-member" type="radio" >
+                            <label>No</label>
+                        </div>
+                    </div>
+
+                    <span class="semi-title">3. Have you been confined/admitted and undergone surgical operation/procedure?</span>
+                    <div class="fields">
+                        
+                        <div class="check-box-1">
+                            <input value="yes" id="socialPensionYes" name="admitted-operation" type="radio" >
+                            <label>Yes</label>                   
+                        </div>
+                        <div class="check-box-1">
+                            <input value="no" id="socialPensionNo" name="admitted-operation" type="radio" >
+                            <label>No</label>
+                        </div>
+                        <div class="input-field">
+                            <label>If YES, what procedure?</label>
+                            <input id="what-procedure" name="what-procedure" type="text">
+                        </div>
+                    </div>
+
+                    <span class="semi-title">4. Have you availed of any assistance yet?</span>
+                    <div class="fields">
+                        
+                        <div class="check-box-1">
+                            <input value="yes" id="availedAssistance" name="availedAssistance" type="radio" >
+                            <label>Yes</label>                   
+                        </div>
+                        <div class="check-box-1">
+                            <input value="no" id="availedAssistance" name="availedAssistance" type="radio" >
+                            <label>No</label>
+                        </div>
+                        <div class="input-field">
+                            <label>If YES, what form of assistance?</label>
+                            <input id="what-assistance" name="what-assistance" type="text">
+                        </div>
+                    </div>
+
+                    <span class="semi-title">5. Last DATE received Medical Cash Assistance from</span>
+                    <div class="fields">
+                        
+                        <div class="check-box-1">
+                            <input value="CSWDO" id="medicalCashAssistance" name="medicalCashAssistance" type="radio" >
+                            <label>CSWDO</label>                   
+                        </div>
+                        <div class="check-box-1">
+                            <input value="PCSO" id="medicalCashAssistance" name="medicalCashAssistance" type="radio" >
+                            <label>PCSO</label>
+                        </div>
+                    </div>
+
+                    <button type="button" class="backBtn7">
+                        <i class="uil uil-navigator"></i>
+                        <span class="btnText">Back</span>
+                    </button>
+                    
+                    <button type="button" class="nextBtn8">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+
+                </div>
+       
+            </div>
         </form>
     </div>
 
     <script>
 
-        // Get references to the checkbox and select form
+        // Name Extension checkbox
         const checkbox = document.getElementById('checkFormEXT');
         const selectForm = document.getElementById('selectFormEXT');
     
-        // Add event listener to the checkbox
+        
         checkbox.addEventListener('change', function() {
           // Enable or disable the select form based on the checkbox's checked state
           if (checkbox.checked) {
@@ -666,6 +853,31 @@
             selectForm.disabled = true;
           }
         });
+
+        // Financially Support Checkbox
+        const checkbox2 = document.getElementById("checkFormSupportChildren");
+        const checkbox3 = document.getElementById("checkFormSupportOther");
+        const emsChildren = document.getElementById("estimated-monthly-support-children");
+        const emsOther = document.getElementById("estimated-monthly-support-other");
+
+        checkbox2.addEventListener('change', function() {
+            if (checkbox2.checked){
+                emsChildren.disabled=false;
+            } else {
+                emsChildren.disabled=true;
+            }
+
+        });
+
+        checkbox3.addEventListener('change', function() {
+            if (checkbox3.checked){
+                emsOther.disabled=false;
+            } else {
+                emsOther.disabled=true;
+            }
+
+        });
+
 
         //FOR RENTAL
         function enableNextSelect() {
@@ -765,9 +977,23 @@
         const form = document.querySelector("form"),
             nextBtn = form.querySelector(".nextBtn"),
             backBtn = form.querySelector(".backBtn"),
+            backBtn2 = form.querySelector(".backBtn2"),
+            backBtn3 = form.querySelector(".backBtn3"),
+            backBtn4 = form.querySelector(".backBtn4"),
+            backBtn5 = form.querySelector(".backBtn5"),
+            backBtn6 = form.querySelector(".backBtn6"),
+            backBtn7 = form.querySelector(".backBtn7"),
+
+            nextBtn2 = form.querySelector(".nextBtn2"),
+            nextBtn3 = form.querySelector(".nextBtn3"),
+            nextBtn4 = form.querySelector(".nextBtn4"),
+            nextBtn5 = form.querySelector(".nextBtn5"),
+            nextBtn6 = form.querySelector(".nextBtn6"),
+            nextBtn7 = form.querySelector(".nextBtn7"),
+            nextBtn8 = form.querySelector(".nextBtn8"),
+
             allInput = form.querySelectorAll(".first"),
             thirdForm = form.querySelector(".third");
-            fourthForm = form.querySelector(".fourth");
             
 
 
@@ -781,60 +1007,153 @@
             })
         })
 
+        nextBtn2.addEventListener("click", () => {
+            allInput.forEach(input => {
+                if (input.value != "") {
+                    form.classList.add('thirdActive');
+                } else {
+                    form.classList.remove('thirdActive');
+                }
+            })
+        })
+
+        nextBtn3.addEventListener("click", () => {
+            allInput.forEach(input => {
+                if (input.value != "") {
+                    form.classList.add('fourthActive');
+                } else {
+                    form.classList.remove('fourthActive');
+                }
+            })
+        })
+
+        nextBtn4.addEventListener("click", () => {
+            allInput.forEach(input => {
+                if (input.value != "") {
+                    form.classList.add('fifthActive');
+                } else {
+                    form.classList.remove('fifthActive');
+                }
+            })
+        })
+
+        nextBtn5.addEventListener("click", () => {
+            allInput.forEach(input => {
+                if (input.value != "") {
+                    form.classList.add('sixthActive');
+                } else {
+                    form.classList.remove('sixthActive');
+                }
+            })
+        })
+
+        nextBtn6.addEventListener("click", () => {
+            allInput.forEach(input => {
+                if (input.value != "") {
+                    form.classList.add('seventhActive');
+                } else {
+                    form.classList.remove('seventhActive');
+                }
+            })
+        })
+
+        nextBtn7.addEventListener("click", () => {
+            allInput.forEach(input => {
+                if (input.value != "") {
+                    form.classList.add('eighthActive');
+                } else {
+                    form.classList.remove('eighthActive');
+                }
+            })
+        })
+
+        nextBtn8.addEventListener("click", () => {
+            allInput.forEach(input => {
+                if (input.value != "") {
+                    form.classList.add('ninthActive');
+                } else {
+                    form.classList.remove('ninthActive');
+                }
+            })
+        })
+
         backBtn.addEventListener("click", () => {
-            form.classList.remove('secActive');
-            form.classList.remove('thirdActive');
+            form.classList.remove('secActive');   
         });
 
-        function nextContainer() {
-            if (form.classList.contains('secActive')) {
-                form.classList.remove('secActive');
-                form.classList.add('thirdActive');
-            } else if (form.classList.contains('thirdActive')) {
-                form.classList.remove('thirdActive');
-                form.classList.add('fourthActive');
-            } else if (form.classList.contains('fourthActive')) {
-                form.classList.remove('fourthActive');
-                form.classList.add('fifthActive');
-            } else if (form.classList.contains('fifthActive')) {
-                form.classList.remove('fifthActive');
-                form.classList.add('sixthActive');
-            } else if (form.classList.contains('sixthActive')) {
-                form.classList.remove('sixthActive');
-                form.classList.add('seventhActive');
-            } else if (form.classList.contains('seventhActive')) {
-                form.classList.remove('seventhActive');
-                form.classList.add('eighthActive');
-            } else if (form.classList.contains('eighthActive')) {
-                form.classList.remove('eighthActive');
-                form.classList.add('ninthActive');
-            }
-        }
+        backBtn2.addEventListener("click", () => {
+            form.classList.remove('thirdActive');   
+        });
 
-        function prevContainer() {
-            if (form.classList.contains('thirdActive')) {
-                form.classList.remove('thirdActive');
-                form.classList.add('secActive');
-            } else if (form.classList.contains('fourthActive')) {
-                form.classList.remove('fourthActive');
-                form.classList.add('thirdActive');
-            } else if (form.classList.contains('fifthActive')) {
-                form.classList.remove('fifthActive');
-                form.classList.add('fourthActive');
-            } else if (form.classList.contains('sixthActive')) {
-                form.classList.remove('sixthActive');
-                form.classList.add('fifthActive');
-            } else if (form.classList.contains('seventhActive')) {
-                form.classList.remove('seventhActive');
-                form.classList.add('sixthActive');
-            } else if (form.classList.contains('eighthActive')) {
-                form.classList.remove('eighthActive');
-                form.classList.add('seventhActive');
-            } else if (form.classList.contains('ninthActive')) {
-                form.classList.remove('ninthActive');
-                form.classList.add('eighthActive');
-            }
-        }
+        backBtn3.addEventListener("click", () => {
+            form.classList.remove('fourthActive');   
+        });
+
+        backBtn4.addEventListener("click", () => {
+            form.classList.remove('fifthActive');   
+        });
+
+        backBtn5.addEventListener("click", () => {
+            form.classList.remove('sixthActive');   
+        });
+
+        backBtn6.addEventListener("click", () => {
+            form.classList.remove('seventhActive');   
+        });
+
+        backBtn7.addEventListener("click", () => {
+            form.classList.remove('eighthActive');   
+        });
+
+        // function nextContainer() {
+        //     if (form.classList.contains('secActive')) {
+        //         form.classList.remove('secActive');
+        //         form.classList.add('thirdActive');
+        //     } else if (form.classList.contains('thirdActive')) {
+        //         form.classList.remove('thirdActive');
+        //         form.classList.add('fourthActive');
+        //     } else if (form.classList.contains('fourthActive')) {
+        //         form.classList.remove('fourthActive');
+        //         form.classList.add('fifthActive');
+        //     } else if (form.classList.contains('fifthActive')) {
+        //         form.classList.remove('fifthActive');
+        //         form.classList.add('sixthActive');
+        //     } else if (form.classList.contains('sixthActive')) {
+        //         form.classList.remove('sixthActive');
+        //         form.classList.add('seventhActive');
+        //     } else if (form.classList.contains('seventhActive')) {
+        //         form.classList.remove('seventhActive');
+        //         form.classList.add('eighthActive');
+        //     } else if (form.classList.contains('eighthActive')) {
+        //         form.classList.remove('eighthActive');
+        //         form.classList.add('ninthActive');
+        //     }
+        // }
+
+        // function prevContainer() {
+        //     if (form.classList.contains('thirdActive')) {
+        //         form.classList.remove('thirdActive');
+        //         form.classList.add('secActive');
+        //     } else if (form.classList.contains('fourthActive')) {
+        //         form.classList.remove('fourthActive');
+        //         form.classList.add('thirdActive');
+        //     } else if (form.classList.contains('fifthActive')) {
+        //         form.classList.remove('fifthActive');
+        //         form.classList.add('fourthActive');
+        //     } else if (form.classList.contains('sixthActive')) {
+        //         form.classList.remove('sixthActive');
+        //         form.classList.add('fifthActive');
+        //     } else if (form.classList.contains('seventhActive')) {
+        //         form.classList.remove('seventhActive');
+        //         form.classList.add('sixthActive');
+        //     } else if (form.classList.contains('eighthActive')) {
+        //         form.classList.remove('eighthActive');
+        //         form.classList.add('seventhActive');
+        //     } else if (form.classList.contains('ninthActive')) {
+        //         form.classList.remove('ninthActive');
+        //         form.classList.add('eighthActive');
+        //     }
+        // }
 
 
     </script>
