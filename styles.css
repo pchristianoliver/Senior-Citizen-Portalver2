@@ -51,8 +51,8 @@ body{
 
 .container form {
     position: relative;
-    margin-top: 16px;
-    min-height: 700px;
+    margin-top: 12px;
+    height: 490px;
     background-color: #fff;
     overflow: hidden;
     align-items: center;
@@ -64,7 +64,7 @@ body{
 .container form .form {
     position: absolute;
     background-color: #fff;
-    transition: .8s ease;
+    transition: .6s ease;
 
 }
 
@@ -180,6 +180,13 @@ transform: translateX(-100%);
 opacity: 0;
 pointer-events: none;
 transform: translateX(200%);
+overflow-y: scroll;
+height: 490px;
+}
+
+.health-wellness{
+    height: 490px;
+    margin-left: 23px;
 }
 
 form.eighthActive .form.eighth {
@@ -212,6 +219,8 @@ pointer-events: none;
 transform: translateX(-100%);
 }
 
+
+
 .container form .title{
     display: block;
     margin-bottom: 8px;
@@ -227,6 +236,7 @@ transform: translateX(-100%);
     margin: 15px 0 0 0;
     font-weight: 300;
     color: #333;
+    font-weight: bold;
 }
 .container form .fields{
     display: flex;
@@ -399,7 +409,7 @@ form .buttons{
 form .buttons button , .backBtn{
     margin-right: 14px;
 }
-@media (max-width: 750px) {
+/* @media (max-width: 750px) {
     .container form{
         overflow-y: scroll;
     }
@@ -415,4 +425,4 @@ form .buttons button , .backBtn{
     form .fields .input-field{
         width: 100%;
     }
-}
+} */
