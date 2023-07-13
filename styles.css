@@ -52,7 +52,7 @@ body{
 .container form {
     position: relative;
     margin-top: 12px;
-    height: 490px;
+    height: 540px;
     background-color: #fff;
     overflow: hidden;
     align-items: center;
@@ -219,6 +219,23 @@ pointer-events: none;
 transform: translateX(-100%);
 }
 
+.container form .form.tenth {
+opacity: 0;
+pointer-events: none;
+transform: translateX(200%);
+}
+
+form.tenthActive .form.tenth {
+opacity: 1;
+pointer-events: auto;
+transform: translateX(0);
+}
+
+form.tenthActive .form.ninth {
+opacity: 0;
+pointer-events: none;
+transform: translateX(-100%);
+}
 
 
 .container form .title{
@@ -381,13 +398,13 @@ form textarea{
     cursor: pointer;
 }
 
-.backBtn, .backBtn2, .backBtn3, .backBtn4, .backBtn5, .backBtn6, .backBtn7, .backBtn8{
+.backBtn, .backBtn2, .backBtn3, .backBtn4, .backBtn5, .backBtn6, .backBtn7, .backBtn8, .backBtn9{
     float: left;
 }
 
-.nextBtn, .nextBtn2, .nextBtn3, .nextBtn4, .nextBtn5, .nextBtn6, .nextBtn7, .nextBtn8, .submitBtn{
+.nextBtn, .nextBtn2, .nextBtn3, .nextBtn4, .nextBtn5, .nextBtn6, .nextBtn7, .nextBtn8, .nextBtn9, .submitBtn{
     float: right;
-}
+}   
 /*  */
 .container form .btnText{
     font-size: 14px;
@@ -399,7 +416,7 @@ form button:hover{
 form button i, form .backBtn i{
     margin: 0 6px;
 }
-form .backBtn i, .backBtn2 i, .backBtn3 i, .backBtn4 i, .backBtn5 i, .backBtn6 i, .backBtn7 i, .backBtn8 i{
+form .backBtn i, .backBtn2 i, .backBtn3 i, .backBtn4 i, .backBtn5 i, .backBtn6 i, .backBtn7 i, .backBtn8 i, .backBtn9 i{
     transform: rotate(180deg);
 }
 form .buttons{
@@ -409,6 +426,23 @@ form .buttons{
 form .buttons button , .backBtn{
     margin-right: 14px;
 }
+
+/* asd */
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+display: inline-block;
+width: 100px;
+}
+
+#review-output {
+    margin-top: 10px;
+    font-weight: bold;
+    height: 490px;  
+  }
 /* @media (max-width: 750px) {
     .container form{
         overflow-y: scroll;

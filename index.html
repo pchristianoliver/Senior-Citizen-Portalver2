@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.3.5/signature_pad.min.js" integrity="sha512-kw/nRM/BMR2XGArXnOoxKOO5VBHLdITAW00aG8qK4zBzcLVZ4nzg7/oYCaoiwc8U9zrnsO9UHqpyljJ8+iqYiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://kit.fontawesome.com/d1216670ee.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </head>
     <div class="container">
         <header>Registration</header>
@@ -21,17 +22,17 @@
                     <div class="fields">
                         <div class="input-field">
                             <label>Last Name</label>
-                            <input name="lastName" type="text" placeholder="Enter your last name" required>
+                            <input id="lastName" name="lastName" type="text" placeholder="Enter your last name" required>
                         </div>
 
                         <div class="input-field">
                             <label>First Name</label>
-                            <input name="firstName" type="text" placeholder="Enter your first name" required>
+                            <input id="firstName" name="firstName" type="text" placeholder="Enter your first name" required>
                         </div>
 
                         <div class="input-field">
                             <label class="text-box">Middle Name</label>
-                            <input name="middleName" type="text" placeholder="Enter your middle name">
+                            <input id="middleName" name="middleName" type="text" placeholder="Enter your middle name">
                         </div>
 
                         <div class="check-box" style="margin: 20px 0 0 50px">
@@ -40,14 +41,14 @@
                         </div>
 
                         <select name="nameExtension" id="selectFormEXT" style="margin: 20px 0 0 2px" disabled>
-                            <option>JR.</option>
-                            <option>SR.</option>
-                            <option>I</option>
-                            <option>II</option>
-                            <option>III</option>
-                            <option>IV</option>
-                            <option>V</option>
-                            <option>VI</option> 
+                            <option value="JR.">JR.</option>
+                            <option value="SR.">SR.</option>
+                            <option value="I">I</option>
+                            <option value="II">II</option>
+                            <option value="III">III</option>
+                            <option value="IV">IV</option>
+                            <option value="V">V</option>
+                            <option value="VI">VI</option> 
                         </select>
                         
                         <div class="input-field-small">
@@ -75,21 +76,20 @@
     
                         <div class="input-field-small">
                             <label for="year">Year:</label>
-                            <select name="yearDOB" id="birthYear" name="year" ></select>
+                            <select name="yearDOB" id="birthYear" name="year" onclick="calculateAge()" ></select>
                         </div>
 
-                        <i id="clickableAwesomeFont" style="color: rgb(51, 153, 85);" class="fa-solid fa-circle-check fa-fade" onclick="calculateAge()"></i>
-                        <span style="margin: 10px 400px 0 10px; font-size: 12px;" id="age">Click here to check your age.</span>
-
+                        <i id="clickableAwesomeFont" style="color: rgb(51, 153, 85);" class="fa-solid fa-circle-check fa-fade"></i>
+                        <span style="margin: 10px 400px 0 10px; font-size: 12px;" id="age">Your age is</span>
 
                         <div class="input-field">
                             <label  class="text-box">Birth Place:</label>
-                            <input name="birthPlace" type="text" placeholder="Enter your birth place" required>
+                            <input id=birthPlace name="birthPlace" type="text" placeholder="Enter your birth place" required>
                         </div>
                         
                         <div class="input-field">
                             <label class="text-box"> Sex:</label>
-                            <select name="gender" id="selectForm" >
+                            <select name="gender" id="selectFormGender" >
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                             </select>
@@ -97,7 +97,7 @@
 
                         <div class="input-field">
                             <label class="text-box">Marital Status</label>
-                            <select name="marital-status" id="selectForm" >
+                            <select name="marital-status" id="selectFormMarital" >
                                 <option value="Single">Single</option>
                                 <option value="Married">Married</option>
                                 <option value="Widow/Widower">Widow/Widower</option>
@@ -107,7 +107,7 @@
 
                         <div class="input-field">
                             <label  class="text-box">Contact Number</label>
-                            <input name="contactNumber" type="tel" placeholder="Enter your contact number" >
+                            <input id="number" name="contactNumber" type="tel" placeholder="Enter your contact number" >
                         </div>
 
                         <div class="input-field">
@@ -133,8 +133,23 @@
                             <label>Rental Amount:</label>
                             <input name="rentalAmount" type="text" id="rentalAmount" disabled>
                         </div>
+ 
+
                     </div>
 
+                    <span class="semi-title">File Upload</span>
+                    <p style="font-size: small;">1. Birth Certificate or Baptismal / Valid ID with Date of Birth <br>2. Voter’s ID / National ID or Certificate of Residency</p>
+                        <div class= upload>
+                            <div class="fields">
+                                <input type="file" id="file1" name="file1">
+                                <br>
+                                <input type="file" id="file2" name="file2">
+                                <br>
+                            </div>
+                            
+                        </div>
+
+                    
                     <button type="button" class="nextBtn">
                         <span class="btnText">Next</span>
                         <i class="uil uil-navigator"></i>
@@ -682,7 +697,7 @@
 
                         <div class="input-field">
                             <label>Estimated Monthly Support</label>
-                            <input id="estimated-monthly-support-children" name="estimated-monthly-support-children" type="text" placeholder="Estimated Monthly Income" disabled>
+                            <input id="estimated-monthly-support-children" name="estimated-monthly-support-children" type="text" placeholder="Estimated Monthly Support" disabled>
                         </div>  
                         
                     </div>
@@ -696,7 +711,7 @@
 
                         <div class="input-field">
                             <label>Estimated Monthly Support</label>
-                            <input id="estimated-monthly-support-other" name="estimated-monthly-support-other" type="text" placeholder="Estimated Monthly Sales" disabled>
+                            <input id="estimated-monthly-support-other" name="estimated-monthly-support-other" type="text" placeholder="Estimated Monthly Support" disabled>
                         </div>
 
                     </div>
@@ -747,7 +762,7 @@
                         <span class="btnText">Back</span>
                     </button>
                     <button type="button" class="nextBtn7">
-                        <span class="btnText">Next</span>
+                        <span class="btnText" onclick="reviewForm()">Next</span>
                         <i class="uil uil-navigator"></i>
                     </button>
 
@@ -760,7 +775,7 @@
                     <span class="title">Health and Wellness Condition</span>
                     
                     <div class="fields">
-                        <span class="semi-title">1. Type of Illness: </span>
+                        <span class="semi-title">1. Type of Illness: </span><br>
                         <div class="check-box-1">
                             <input value="Diabetes" type="checkbox" >
                             <label>Diabetes</label>                   
@@ -782,6 +797,7 @@
                             <input value="Others" type="checkbox" >
                             <label>Others</label>
                         </div>
+                        
                     </div>
 
                     <span class="semi-title">2. Are you a Philhealth member?</span>
@@ -881,16 +897,38 @@
                         <span class="btnText">Back</span>
                     </button>
                     
-                    <button type="button" class="submitBtn">
-                        <span class="btnText">Submit</span>
+                    <button type="button" class="nextBtn9" onclick="reviewForm()">
+                        <span class="btnText">View Summary</span>
                         <i class="uil uil-navigator"></i>
                     </button>
                 </div>
+            </div>
+
+            <div class="form tenth">
+                <div class="fields">
+                    <div id="review-output"></div>     
+                </div>
+                
+                
             </div>
         </form>
     </div>
 
     <script>
+
+        function reviewForm() {
+        var firstName= document.getElementById("firstName").value;
+        var lastName = document.getElementById("lastName").value;
+        var middleName = document.getElementById("middleName").value;
+
+        var reviewOutput = document.getElementById("review-output");
+        reviewOutput.innerHTML = "";
+
+        reviewOutput.innerHTML = "First Name: " + firstName + "<br>";
+        reviewOutput.innerHTML += "Last Name: " + lastName + "<br>";
+        reviewOutput.innerHTML += "Middle Name: " + middleName;
+        }
+
 
         // Name Extension checkbox
         const checkbox = document.getElementById('checkFormEXT');
@@ -972,7 +1010,7 @@
         const month = parseInt(monthSelect.value, 10);
         const daysInMonth = new Date(yearSelect.value, month, 0).getDate();
         
-        daySelect.innerHTML = ""; // Clear previous options
+        
 
         for (let i = 1; i <= daysInMonth; i++) {
             const option = document.createElement("option");
@@ -1036,6 +1074,7 @@
             backBtn6 = form.querySelector(".backBtn6"),
             backBtn7 = form.querySelector(".backBtn7"),
             backBtn8 = form.querySelector(".backBtn8"),
+            backBtn9 = form.querySelector(".backBtn9"),
 
             nextBtn2 = form.querySelector(".nextBtn2"),
             nextBtn3 = form.querySelector(".nextBtn3"),
@@ -1044,6 +1083,7 @@
             nextBtn6 = form.querySelector(".nextBtn6"),
             nextBtn7 = form.querySelector(".nextBtn7"),
             nextBtn8 = form.querySelector(".nextBtn8"),
+            nextBtn9 = form.querySelector(".nextBtn9"),
 
             allInput = form.querySelectorAll(".first"),
             thirdForm = form.querySelector(".third");
@@ -1130,6 +1170,16 @@
             })
         })
 
+        nextBtn9.addEventListener("click", () => {
+            allInput.forEach(input => {
+                if (input.value != "") {
+                    form.classList.add('tenthActive');
+                } else {
+                    form.classList.remove('tenthActive');
+                }
+            })
+        })
+
         backBtn.addEventListener("click", () => {
             form.classList.remove('secActive');   
         });
@@ -1160,6 +1210,10 @@
 
         backBtn8.addEventListener("click", () => {
             form.classList.remove('ninthActive');   
+        });
+
+        backBtn9.addEventListener("click", () => {
+            form.classList.remove('tenthActive');   
         });
 
         // function nextContainer() {
