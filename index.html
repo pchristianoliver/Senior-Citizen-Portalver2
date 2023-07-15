@@ -897,7 +897,7 @@
                         <span class="btnText">Back</span>
                     </button>
                     
-                    <button type="button" class="nextBtn9" onclick="reviewForm()">
+                    <button type="button" class="nextBtn9" onclick="updateSummary()">
                         <span class="btnText">View Summary</span>
                         <i class="uil uil-navigator"></i>
                     </button>
@@ -905,8 +905,22 @@
             </div>
 
             <div class="form tenth">
-                <div class="fields">
-                    <div id="review-output"></div>     
+                <div class="summary">
+                    <span class="title">Summary</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Last Name</label>
+                            <input id="summaryLastName" name="summaryLastName" type="text" disabled readonly>
+                        </div>
+                        <div class="input-field">
+                            <label>First Name</label>
+                            <input id="summaryFirstName" name="summaryFirstName" type="text" disabled readonly>
+                        </div>
+                        <div class="input-field">
+                            <label>Middle Name</label>
+                            <input id="summaryMiddleName" name="summaryMiddleName" type="text" disabled readonly>
+                        </div>         
+                    </div>
                 </div>
                 
                 
@@ -915,6 +929,18 @@
     </div>
 
     <script>
+
+        function updateSummary() {
+                // Get the input values from the first form
+                const lastName = document.getElementById('lastName').value;
+                const firstName = document.getElementById('firstName').value;
+                const middleName = document.getElementById('middleName').value;
+
+                // Update the summary section in the second form
+                document.getElementById('summaryLastName').value = lastName;
+                document.getElementById('summaryFirstName').value =  firstName;
+                document.getElementById('summaryMiddleName').value =  middleName;
+            };
 
         function reviewForm() {
         var firstName= document.getElementById("firstName").value;
