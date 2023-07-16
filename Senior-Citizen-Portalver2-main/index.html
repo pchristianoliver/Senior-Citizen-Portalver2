@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.3.5/signature_pad.min.js" integrity="sha512-kw/nRM/BMR2XGArXnOoxKOO5VBHLdITAW00aG8qK4zBzcLVZ4nzg7/oYCaoiwc8U9zrnsO9UHqpyljJ8+iqYiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/d1216670ee.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+    <div class="container">
+        <header>Registration</header>
+
+        <form action="#">
+            <div class="form first">
+                <div class="personal-details">
+                    <span class="title">Personal Details</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Last Name</label>
+                            <input id="lastName" name="lastName" type="text" placeholder="Enter your last name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>First Name</label>
+                            <input id="firstName" name="firstName" type="text" placeholder="Enter your first name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">Middle Name</label>
+                            <input id="middleName" name="middleName" type="text" placeholder="Enter your middle name">
+                        </div>
+
+                        <div class="check-box" style="margin: 20px 0 0 50px">
+                            <label>I have name extention</label>
+                            <input id="checkFormEXT" type="checkbox">
+                        </div>
+
+                        <select name="selectFormEXT" id="selectFormEXT" style="margin: 20px 0 0 2px" disabled>
+                            <option value=""></option>
+                            <option value="JR.">JR.</option>
+                            <option value="SR.">SR.</option>
+                            <option value="I">I</option>
+                            <option value="II">II</option>
+                            <option value="III">III</option>
+                            <option value="IV">IV</option>
+                            <option value="V">V</option>
+                            <option value="VI">VI</option> 
+                        </select>
+                        
+                        <div class="input-field-small">
+                            <label for="month">Birth Month:</label>
+                            <select name="monthDOB" id="birthMonth" name="month" required>
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field-small">
+                            <label for="day">Day:</label>
+                            <select name="dayDOB" id="birthDay" name="day" required></select>
+                        </div>
+    
+                        <div class="input-field-small">
+                            <label for="year">Year:</label>
+                            <select name="yearDOB" id="birthYear" name="year" onclick="calculateAge()" ></select>
+                        </div>
+
+                        <i id="clickableAwesomeFont" style="color: rgb(51, 153, 85);" class="fa-solid fa-circle-check fa-fade"></i>
+                        <span style="margin: 10px 400px 0 10px; font-size: 12px;" id="age">Your age is</span>
+
+                        <div class="input-field">
+                            <label  class="text-box">Birth Place:</label>
+                            <input id=birthPlace name="birthPlace" type="text" placeholder="Enter your birth place" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label class="text-box"> Sex:</label>
+                            <select name="gender" id="selectFormGender" >
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">Marital Status</label>
+                            <select name="marital-status" id="selectFormMarital" >
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                                <option value="Widow/Widower">Widow/Widower</option>
+                                <option value="Separated">Seperated</option>
+                            </select>
+                        </div> 
+
+                        <div class="input-field">
+                            <label  class="text-box">Contact Number</label>
+                            <input id="number" name="contactNumber" type="tel" placeholder="Enter your contact number" >
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">Housing Condition:</label>
+                            <select name="housingCondition" id="housingCondition" onchange="enableNextSelect()">
+                                <option value="House Owner">House Owner</option>
+                                <option value="Rental">Rental</option>
+                                <option value="Living Alone">Living Alone</option>
+                                <option value="Living with Children">Living with Children</option>
+                                <option value="Living with Relatives">Living with Relatives</option>
+                            </select>
+                        </div> 
+
+                        <div class="input-field">
+                            <label>If rental, who pays the rent: </label>
+                            <select name="rentalPayee" id="rentalPayee" disabled>
+                                <option value=""></option>
+                                <option value="Myself">Myself</option>
+                                <option value="Children">Children</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Rental Amount:</label>
+                            <input name="rentalAmount" type="text" id="rentalAmount" disabled>
+                        </div>
+ 
+
+                    </div>
+
+                    <span class="semi-title">File Upload</span>
+                    <p style="font-size: small;">1. Birth Certificate or Baptismal / Valid ID with Date of Birth <br>2. Voter’s ID / National ID or Certificate of Residency</p>
+                        <div class= upload>
+                            <div class="fields">
+                                <input type="file" id="file1" name="file1">
+                                <br>
+                                <input type="file" id="file2" name="file2">
+                                <br>
+                            </div>
+                            
+                        </div>
+
+                    
+                    <button type="button" class="nextBtn">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div> 
+              
+            </div>  
+
+            <div class="form second">
+                <div class="address-details">
+                    <span class="title">Address</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label class="text-box">Region</label>
+                            <input name="region" type="text" placeholder="CALABARZON" disabled>
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">Province</label>
+                            <input name="region" type="text" placeholder="LAGUNA" disabled>
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">City</label>
+                            <input name="region" type="text" placeholder="BIÑAN CITY" disabled>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="stacked-barangay">Barangay</label>
+                            <select name="barangay" id="stacked-barangay">
+                            </select>
+                        </div>
+
+                        <div class="input-field-big">
+                            <label class="text-box">Residence (House No./Block/Lot)</label>
+                            <input name="residence" type="text" placeholder="Enter your(House No./Block/Lot)">
+                        </div>
+
+                        <div class="input-field-big">
+                            <label class="text-box">Street (Zone/Purok/Sitio) </label>
+                            <input name="street" type="text" placeholder="Enter your street">
+                        </div>
+                    </div>
+
+                    <button type="button" class="backBtn">
+                        <i class="uil uil-navigator"></i>
+                        <span class="btnText">Back</span>
+                    </button>
+
+                    <button type="button" class="nextBtn2">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="form third">
+                <div class="family-details">
+                    <span class="title">Family Members Living with Senior Citizen</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Child/Relative Name</label>
+                            <input name="livingWithSCName" type="text" placeholder="Relative/Child Name">
+                        </div>
+
+                        <div class="input-field-small">
+                            <label>Relation</label>
+                            <input name="livingWithSCRelation" type="text" placeholder="Relation" >
+                        </div>
+
+                        <div class="input-field-small">
+                            <label>Age</label>
+                            <input name="livingWithSCAge" type="number" placeholder="Age" >
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">Marital Status</label>
+                            <select name="marital-status-family" id="selectForm" >
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                                <option value="Widow/Widower">Widow/Widower</option>
+                                <option value="Separated">Seperated</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Occupation</label>
+                            <input name="livingWithSCOccupation" type="text" placeholder="Occupation" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Child/Relative Name</label>
+                            <input name="livingWithSCName" type="text" placeholder="Relative/Child Name">
+                        </div>
+
+                        <div class="input-field-small">
+                            <label>Relation</label>
+                            <input name="livingWithSCRelation" type="text" placeholder="Relation" >
+                        </div>
+
+                        <div class="input-field-small">
+                            <label>Age</label>
+                            <input name="livingWithSCAge" type="number" placeholder="Age" >
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">Marital Status</label>
+                            <select name="marital-status-family" id="selectForm" >
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                                <option value="Widow/Widower">Widow/Widower</option>
+                                <option value="Separated">Seperated</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Occupation</label>
+                            <input name="livingWithSCOccupation" type="text" placeholder="Occupation" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Child/Relative Name</label>
+                            <input name="livingWithSCName" type="text" placeholder="Relative/Child Name">
+                        </div>
+
+                        <div class="input-field-small">
+                            <label>Relation</label>
+                            <input name="livingWithSCRelation" type="text" placeholder="Relation" >
+                        </div>
+
+                        <div class="input-field-small">
+                            <label>Age</label>
+                            <input name="livingWithSCAge" type="number" placeholder="Age" >
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">Marital Status</label>
+                            <select name="marital-status-family" id="selectForm" >
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                                <option value="Widow/Widower">Widow/Widower</option>
+                                <option value="Separated">Seperated</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Occupation</label>
+                            <input name="livingWithSCOccupation" type="text" placeholder="Occupation" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Child/Relative Name</label>
+                            <input name="livingWithSCName" type="text" placeholder="Relative/Child Name">
+                        </div>
+
+                        <div class="input-field-small">
+                            <label>Relation</label>
+                            <input name="livingWithSCRelation" type="text" placeholder="Relation" >
+                        </div>
+
+                        <div class="input-field-small">
+                            <label>Age</label>
+                            <input name="livingWithSCAge" type="number" placeholder="Age" >
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">Marital Status</label>
+                            <select name="marital-status-family" id="selectForm" >
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                                <option value="Widow/Widower">Widow/Widower</option>
+                                <option value="Separated">Seperated</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Occupation</label>
+                            <input name="livingWithSCOccupation" type="text" placeholder="Occupation" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Child/Relative Name</label>
+                            <input name="livingWithSCName" type="text" placeholder="Relative/Child Name">
+                        </div>
+
+                        <div class="input-field-small">
+                            <label>Relation</label>
+                            <input name="livingWithSCRelation" type="text" placeholder="Relation" >
+                        </div>
+
+                        <div class="input-field-small">
+                            <label>Age</label>
+                            <input name="livingWithSCAge" type="number" placeholder="Age" >
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">Marital Status</label>
+                            <select name="marital-status-family" id="selectForm" >
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                                <option value="Widow/Widower">Widow/Widower</option>
+                                <option value="Separated">Seperated</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Occupation</label>
+                            <input name="livingWithSCOccupation" type="text" placeholder="Occupation" >
+                        </div>
+
+                    </div>  
+
+                    <button type="button" class="backBtn2">
+                        <i class="uil uil-navigator"></i>
+                        <span class="btnText">Back</span>
+                    </button>
+                    <button type="button" class="nextBtn3">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form fourth">
+                <div class="family-details">
+                    <span class="title">Family Members <u><strong>NOT</strong></u> Living with Senior Citizen</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Child/Relative Name</label>
+                            <input name="livingWithSCName" type="text" placeholder="Relative/Child Name">
+                        </div>
+
+                        <div class="input-field-small">
+                            <label>Relation</label>
+                            <input name="livingWithSCRelation" type="text" placeholder="Relation" >
+                        </div>
+
+                        <div class="input-field-small">
+                            <label>Age</label>
+                            <input name="livingWithSCAge" type="number" placeholder="Age" >
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">Marital Status</label>
+                            <select name="marital-status-family" id="selectForm" >
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                                <option value="Widow/Widower">Widow/Widower</option>
+                                <option value="Separated">Seperated</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Occupation</label>
+                            <input name="livingWithSCOccupation" type="text" placeholder="Occupation" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Child/Relative Name</label>
+                            <input name="livingWithSCName" type="text" placeholder="Relative/Child Name">
+                        </div>
+
+                        <div class="input-field-small">
+                            <label>Relation</label>
+                            <input name="livingWithSCRelation" type="text" placeholder="Relation" >
+                        </div>
+
+                        <div class="input-field-small">
+                            <label>Age</label>
+                            <input name="livingWithSCAge" type="number" placeholder="Age" >
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">Marital Status</label>
+                            <select name="marital-status-family" id="selectForm" >
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                                <option value="Widow/Widower">Widow/Widower</option>
+                                <option value="Separated">Seperated</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Occupation</label>
+                            <input name="livingWithSCOccupation" type="text" placeholder="Occupation" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Child/Relative Name</label>
+                            <input name="livingWithSCName" type="text" placeholder="Relative/Child Name">
+                        </div>
+
+                        <div class="input-field-small">
+                            <label>Relation</label>
+                            <input name="livingWithSCRelation" type="text" placeholder="Relation" >
+                        </div>
+
+                        <div class="input-field-small">
+                            <label>Age</label>
+                            <input name="livingWithSCAge" type="number" placeholder="Age" >
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">Marital Status</label>
+                            <select name="marital-status-family" id="selectForm" >
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                                <option value="Widow/Widower">Widow/Widower</option>
+                                <option value="Separated">Seperated</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Occupation</label>
+                            <input name="livingWithSCOccupation" type="text" placeholder="Occupation" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Child/Relative Name</label>
+                            <input name="livingWithSCName" type="text" placeholder="Relative/Child Name">
+                        </div>
+
+                        <div class="input-field-small">
+                            <label>Relation</label>
+                            <input name="livingWithSCRelation" type="text" placeholder="Relation" >
+                        </div>
+
+                        <div class="input-field-small">
+                            <label>Age</label>
+                            <input name="livingWithSCAge" type="number" placeholder="Age" >
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">Marital Status</label>
+                            <select name="marital-status-family" id="selectForm" >
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                                <option value="Widow/Widower">Widow/Widower</option>
+                                <option value="Separated">Seperated</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Occupation</label>
+                            <input name="livingWithSCOccupation" type="text" placeholder="Occupation" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Child/Relative Name</label>
+                            <input name="livingWithSCName" type="text" placeholder="Relative/Child Name">
+                        </div>
+
+                        <div class="input-field-small">
+                            <label>Relation</label>
+                            <input name="livingWithSCRelation" type="text" placeholder="Relation" >
+                        </div>
+
+                        <div class="input-field-small">
+                            <label>Age</label>
+                            <input name="livingWithSCAge" type="number" placeholder="Age" >
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">Marital Status</label>
+                            <select name="marital-status-family" id="selectForm" >
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                                <option value="Widow/Widower">Widow/Widower</option>
+                                <option value="Separated">Seperated</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Occupation</label>
+                            <input name="livingWithSCOccupation" type="text" placeholder="Occupation" >
+                        </div>
+
+                    </div>  
+
+                    <button type="button" class="backBtn3">
+                        <i class="uil uil-navigator"></i>
+                        <span class="btnText">Back</span>
+                    </button>
+                    <button type="button" class="nextBtn4">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form fifth">
+                <div class="educ-employment-history">
+                    <span class="title">Educational Attainment</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label class="text-box">Elementary</label>
+                            <input name="elementary" type="text" placeholder="Elementary" >
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">School Year</label>
+                            <input name="elem-SY" type="text" placeholder="School Year" >
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">Secondary</label>
+                            <input name="secondary" type="text" placeholder="Secondary" >
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">School Year</label>
+                            <input name="secondary-SY" type="text" placeholder="School Year" >
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">College</label>
+                            <input name="college" type="text" placeholder="College" >
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">School Year</label>
+                            <input name="college-SY" type="text" placeholder="School Year" >
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">Graduate Studies</label>
+                            <input name="graduateStudies" type="text" placeholder="Graduate Studies" >
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">School Year</label>
+                            <input name="graduateStudies-SY" type="text" placeholder="School Year" >
+                        </div>
+                    </div>
+                    
+                    <span class="title">Employment History</span>
+                    
+                    <div class="fields">
+                        <div class="input-field">
+                            <label class="text-box">Last Employed</label>
+                            <input name="last-employed" type="text" placeholder="Last Employed" >
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">Last Position</label>
+                            <input name="last-position" type="text" placeholder="Last Position" >
+                        </div>
+
+                        <div class="input-field-big">
+                            <label class="text-box">Name of Company</label>
+                            <input name="name-of-company" type="text" placeholder="Name of Company" >
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">Years in Service</label>
+                            <input name="years-in-service" type="text" placeholder="Years in Service" >
+                        </div>
+
+                        <div class="input-field">
+                            <label class="text-box">Years of Employment</label>
+                            <input name="years-of-employment" type="text" placeholder="Years of Employment" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Reason for Leaving</label>
+                            <select name="reason-for-leaving" id="reason-for-leaving" >
+                                <option value="End of Contract">End of Contract</option>
+                                <option value="Resigned">Resigned</option>
+                                <option value="Terminated">Terminated</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="button" class="backBtn4">
+                        <i class="uil uil-navigator"></i>
+                        <span class="btnText">Back</span>
+                    </button>
+                    <button type="button" class="nextBtn5">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                    
+                </div>
+
+            </div>
+
+            <div class="form sixth">
+                <div class="present-source-income">
+                    <span class="title">Present Source/s of Income</span>
+                    <span class="semi-title">What kind of pension/s do you have?</span>
+                    <div class="fields">
+                        
+                        <div class="check-box-1" >
+                            <label>Pensioner</label>
+                            <input id="checkFormEXT" type="checkbox">
+                        </div>
+                        <div class="check-box-1" >
+                            <label>Non-Pensioner</label>
+                            <input id="checkFormEXT" type="checkbox">
+                        </div>
+                        <div class="check-box-1" >
+                            <label>SSS Pensioner</label>
+                            <input id="checkFormEXT" type="checkbox">
+                        </div>
+                        <div class="check-box-1">
+                            <label>GSIS     Pensioner</label>
+                            <input id="checkFormEXT" type="checkbox">
+                        </div>
+                    </div>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Nature of Employment/Business</label>
+                            <input name="nature-employment-business" type="text" placeholder="Nature of Employment/Business">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Estimated Capital</label>
+                            <input name="estimated-captial" type="text" placeholder="Estimated Capital">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Estimated Monthly Sales</label>
+                            <input name="estimated-monthly-sales" type="text" placeholder="Estimated Monthly Sales">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Estimated Monthly Income</label>
+                            <input name="estimated-monthly-income" type="text" placeholder="Estimated Monthly Income">
+                        </div>
+                    </div>
+
+                    <span class="semi-title">Financially support from:</span>
+                    <div class="fields">
+                        
+                        <div class="check-box-1" >
+                            <label>Children</label>
+                            <input id="checkFormSupportChildren" type="checkbox">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Estimated Monthly Support</label>
+                            <input id="estimated-monthly-support-children" name="estimated-monthly-support-children" type="text" placeholder="Estimated Monthly Support" disabled>
+                        </div>  
+                        
+                    </div>
+
+                    <div class="fields">
+
+                        <div class="check-box-1" >
+                            <label>Others</label>
+                            <input id="checkFormSupportOther" type="checkbox" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Estimated Monthly Support</label>
+                            <input id="estimated-monthly-support-other" name="estimated-monthly-support-other" type="text" placeholder="Estimated Monthly Support" disabled>
+                        </div>
+
+                    </div>
+
+                    <button type="button" class="backBtn5">
+                        <i class="uil uil-navigator"></i>
+                        <span class="btnText">Back</span>
+                    </button>
+                    <button type="button" class="nextBtn6">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                    
+                </div>
+            </div>
+
+            <div class="form seventh">
+                <div class="social-pension">
+                    <span class="title">Indigent Social Pension Program</span>
+                    <span class="semi-title">Are you a recepient/beneficiary of indigent Social Pension Program?</span>
+                    <div class="fields">
+                        <div class="check-box-1">
+                            <input value="yes" id="socialPensionYes" name="social-pension" type="radio" >
+                            <label>Yes</label>                   
+                        </div>
+                        <div class="check-box-1">
+                            <input value="no" id="socialPensionNo" name="social-pension" type="radio" >
+                            <label>No</label>
+                        </div>
+
+                    </div>
+
+                    <span class="semi-title">If YES, which Indigent Social Pension Program?</span>
+                    <div class="fields">
+                        <div class="check-box-1">
+                            <label>National</label>
+                            <input value="national" id="socialPensionNational" name="YesSocialPension" type="radio" >
+                        </div>
+
+                        <div class="check-box-1">
+                            <label>LGU Local</label>
+                            <input value="lgu-local" id="socialPensionLocal" name="YesSocialPension" type="radio" >
+                        </div>
+                    </div>
+
+                    <button type="button" class="backBtn6">
+                        <i class="uil uil-navigator"></i>
+                        <span class="btnText">Back</span>
+                    </button>
+                    <button type="button" class="nextBtn7">
+                        <span class="btnText" onclick="reviewForm()">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+
+                </div>
+       
+            </div>
+
+            <div class="form eighth">
+                <div class="health-wellness">
+                    <span class="title">Health and Wellness Condition</span>
+                    
+                    <div class="fields">
+                        <span class="semi-title">1. Type of Illness: </span><br>
+                        <div class="check-box-1">
+                            <input value="Diabetes" type="checkbox" >
+                            <label>Diabetes</label>                   
+                        </div>
+                        <div class="check-box-1">
+                            <input value="Hypertension"  type="checkbox" >
+                            <label>Hypertension</label>
+                        </div>
+                        <div class="check-box-1">
+                            <input value="Asthma"  type="checkbox" >
+                            <label>Asthma</label>
+                        </div>
+                        <div class="check-box-1">
+                            <input value="Athritis" type="checkbox" >
+                            <label>Athritis</label>
+                        </div>
+
+                        <div class="check-box-1">
+                            <input value="Others" type="checkbox" >
+                            <label>Others</label>
+                        </div>
+                        
+                    </div>
+
+                    <span class="semi-title">2. Are you a Philhealth member?</span>
+                    <div class="fields">
+                        
+                        <div class="check-box-1">
+                            <input value="yes" id="socialPensionYes" name="philheath-member" type="radio" >
+                            <label>Yes</label>                   
+                        </div>
+                        <div class="check-box-1">
+                            <input value="no" id="socialPensionNo" name="philheath-member" type="radio" >
+                            <label>No</label>
+                        </div>
+                    </div>
+
+                    <span class="semi-title">3. Have you been confined/admitted and undergone surgical operation/procedure?</span>
+                    <div class="fields">
+                        
+                        <div class="check-box-1">
+                            <input value="yes" id="socialPensionYes" name="admitted-operation" type="radio" >
+                            <label>Yes</label>                   
+                        </div>
+                        <div class="check-box-1">
+                            <input value="no" id="socialPensionNo" name="admitted-operation" type="radio" >
+                            <label>No</label>
+                        </div>
+                        <div class="input-field">
+                            <label>If YES, what procedure?</label>
+                            <input id="what-procedure" name="what-procedure" type="text">
+                        </div>
+                    </div>
+
+                    <span class="semi-title">4. Have you availed of any assistance yet?</span>
+                    <div class="fields">
+                        
+                        <div class="check-box-1">
+                            <input value="yes" id="availedAssistance" name="availedAssistance" type="radio" >
+                            <label>Yes</label>                   
+                        </div>
+                        <div class="check-box-1">
+                            <input value="no" id="availedAssistance" name="availedAssistance" type="radio" >
+                            <label>No</label>
+                        </div>
+                        <div class="input-field">
+                            <label>If YES, what form of assistance?</label>
+                            <input id="what-assistance" name="what-assistance" type="text">
+                        </div>
+                    </div>
+
+                    <span class="semi-title">5. Last DATE received Medical Cash Assistance from</span>
+                    <div class="fields">
+                        
+                        <div class="check-box-1">
+                            <input value="CSWDO" id="medicalCashAssistance" name="medicalCashAssistance" type="radio" >
+                            <label>CSWDO</label>                   
+                        </div>
+                        <div class="check-box-1">
+                            <input value="PCSO" id="medicalCashAssistance" name="medicalCashAssistance" type="radio" >
+                            <label>PCSO</label>
+                        </div>
+                    
+                        <div class="input-field">
+                            <label>Other</label>
+                            <input id="what-assistance" name="what-assistance" type="text" >
+                        </div>
+                    </div>
+
+                    <span class="semi-title">6. List of Maintenance Medicines</span>
+                    <div class="fields">
+                        <textarea name="Message" rows="3" placeholder="Type here"></textarea>     
+                    </div>
+
+                    <button type="button" class="backBtn7">
+                        <i class="uil uil-navigator"></i>
+                        <span class="btnText">Back</span>
+                    </button>
+                    
+                    <button type="button" class="nextBtn8">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+
+                </div>
+       
+            </div>
+
+            <div class="form ninth">
+                <div class="ideas-and-suggestions">
+                    <span class="title">IDEAS and SUGGESTIONS</span>
+                    <span class="semi-title">Give your ideas and suggestions for a much better implementation of Senior Citizen related programs</span>
+                    <div class="fields">
+                        <textarea name="Message" rows="5" placeholder="Type here"></textarea>     
+                    </div>
+
+                    <button type="button" class="backBtn8">
+                        <i class="uil uil-navigator"></i>
+                        <span class="btnText">Back</span>
+                    </button>
+                    
+                    <button type="button" class="nextBtn9" onclick="updateSummary()">
+                        <span class="btnText">View Summary</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form tenth">
+                <span class="title">Summary</span> 
+                <div class="summary">
+                                
+                    <div class="fields-sum-title">
+                        <span>Complete Name</span>
+                    </div>
+                        <div class="fields-sum">
+                            <div class="input-field-sum">
+                                <label>Last Name</label>
+                                <input id="summaryLastName" name="summaryLastName" type="text" disabled readonly></span>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>First Name</label>
+                                <input id="summaryFirstName" name="summaryFirstName" type="text" disabled readonly>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>Middle Name</label>
+                                <input id="summaryMiddleName" name="summaryMiddleName" type="text" disabled readonly>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>Extension</label>
+                                <input id="summaryNameExtension" name="summaryNameExtension" type="text" disabled readonly>
+                            </div>
+                        </div>
+
+                    <div class="fields-sum-title">
+                        <span>Birth Date</span>
+                    </div>
+                        <div class="fields-sum">
+                            <div class="input-field-sum">
+                                <label>Last Name</label>
+                                <input id="summaryLastName" name="summaryLastName" type="text" disabled readonly></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    
+                    
+                
+                
+            </div>
+        </form>
+    </div>
+
+    <script>
+
+        function updateSummary() {
+            // Get the input values from the first form
+            const lastName = document.getElementById('lastName').value;
+            const firstName = document.getElementById('firstName').value;
+            const middleName = document.getElementById('middleName').value;
+            const nameExtension = document.getElementById('selectFormEXT').value;
+
+            // Update the summary section in the second form
+            document.getElementById('summaryLastName').value = lastName;
+            document.getElementById('summaryFirstName').value =  firstName;
+            document.getElementById('summaryMiddleName').value =  middleName;
+            document.getElementById('summaryNameExtension').value = nameExtension;
+        };
+
+
+        // Name Extension checkbox
+        const checkbox = document.getElementById('checkFormEXT');
+        const selectForm = document.getElementById('selectFormEXT');
+    
+        
+        checkbox.addEventListener('change', function() {
+          // Enable or disable the select form based on the checkbox's checked state
+          if (checkbox.checked) {
+            selectForm.disabled = false;
+          } else {
+            selectForm.disabled = true;
+          }
+        });
+
+        // Financially Support Checkbox
+        const checkbox2 = document.getElementById("checkFormSupportChildren");
+        const checkbox3 = document.getElementById("checkFormSupportOther");
+        const emsChildren = document.getElementById("estimated-monthly-support-children");
+        const emsOther = document.getElementById("estimated-monthly-support-other");
+
+        checkbox2.addEventListener('change', function() {
+            if (checkbox2.checked){
+                emsChildren.disabled=false;
+            } else {
+                emsChildren.disabled=true;
+            }
+
+        });
+
+        checkbox3.addEventListener('change', function() {
+            if (checkbox3.checked){
+                emsOther.disabled=false;
+            } else {
+                emsOther.disabled=true;
+            }
+
+        });
+
+
+        //FOR RENTAL
+        function enableNextSelect() {
+            var housingCondition = document.getElementById('housingCondition');
+            var rentalPayee = document.getElementById('rentalPayee');
+            var rentalAmount = document.getElementById('rentalAmount');
+            
+            if (housingCondition.value === "Rental") {
+                rentalPayee.disabled = false;
+                rentalAmount.disabled = false;
+            } else {
+                rentalPayee.disabled = true;
+                rentalAmount.disabled = true;
+            }
+        }
+    
+        // FOR BARANGAY
+        fetch('barangays.json')
+            .then(response => response.json())
+            .then(data => {
+                var selectElement = document.getElementById("stacked-barangay");
+                data.forEach(function (item) {
+                    var option = document.createElement("option");
+                    option.value = item.value;
+                    option.textContent = item.label;
+                    selectElement.appendChild(option);
+                });
+        })
+        .catch(error => {
+            console.error('Error fetching JSON file:', error);
+        });
+
+        // FOR DATE PICKER
+        const monthSelect = document.getElementById("birthMonth");
+        const daySelect = document.getElementById("birthDay");
+        const yearSelect = document.getElementById("birthYear");
+
+        // Function to dynamically generate the options for the days based on the selected month
+        function generateDays() {
+        const month = parseInt(monthSelect.value, 10);
+        const daysInMonth = new Date(yearSelect.value, month, 0).getDate();
+        
+        
+
+        for (let i = 1; i <= daysInMonth; i++) {
+            const option = document.createElement("option");
+            option.value = i < 10 ? "0" + i : i;
+            option.textContent = i;
+            daySelect.appendChild(option);
+        }
+        }
+
+        // Function to dynamically generate the options for the years
+        function generateYears() {
+        const currentYear = new Date().getFullYear();
+
+        yearSelect.innerHTML = ""; // Clear previous options
+
+        for (let i = currentYear; i >= currentYear - 110; i--) {
+            const option = document.createElement("option");
+            option.value = i;
+            option.textContent = i;
+            yearSelect.appendChild(option);
+        }
+        }
+
+        // Event listeners
+        monthSelect.addEventListener("change", generateDays);
+        yearSelect.addEventListener("change", generateDays);
+        
+        // Generate initial options
+        generateDays();
+        generateYears();
+
+
+        //FOR AGE CALCULATE
+        function calculateAge() {
+            var birthMonth = document.getElementById('birthMonth').value;
+            var birthDay = document.getElementById('birthDay').value;
+            var birthYear = document.getElementById('birthYear').value;
+            
+            var today = new Date();
+            var birthDate = new Date(birthYear, birthMonth - 1, birthDay);
+            
+            var age = today.getFullYear() - birthDate.getFullYear();
+            var monthDiff = today.getMonth() - birthDate.getMonth();
+            
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            
+            document.getElementById('age').textContent = age;
+        }
+        
+        // NEXT
+
+        const form = document.querySelector("form"),
+            nextBtn = form.querySelector(".nextBtn"),
+            backBtn = form.querySelector(".backBtn"),
+            backBtn2 = form.querySelector(".backBtn2"),
+            backBtn3 = form.querySelector(".backBtn3"),
+            backBtn4 = form.querySelector(".backBtn4"),
+            backBtn5 = form.querySelector(".backBtn5"),
+            backBtn6 = form.querySelector(".backBtn6"),
+            backBtn7 = form.querySelector(".backBtn7"),
+            backBtn8 = form.querySelector(".backBtn8"),
+            backBtn9 = form.querySelector(".backBtn9"),
+
+            nextBtn2 = form.querySelector(".nextBtn2"),
+            nextBtn3 = form.querySelector(".nextBtn3"),
+            nextBtn4 = form.querySelector(".nextBtn4"),
+            nextBtn5 = form.querySelector(".nextBtn5"),
+            nextBtn6 = form.querySelector(".nextBtn6"),
+            nextBtn7 = form.querySelector(".nextBtn7"),
+            nextBtn8 = form.querySelector(".nextBtn8"),
+            nextBtn9 = form.querySelector(".nextBtn9"),
+
+            allInput = form.querySelectorAll(".first"),
+            thirdForm = form.querySelector(".third");
+            
+
+
+        nextBtn.addEventListener("click", () => {
+            allInput.forEach(input => {
+                if (input.value != "") {
+                    form.classList.add('secActive');
+                } else {
+                    form.classList.remove('secActive');
+                }
+            })
+        })
+
+        nextBtn2.addEventListener("click", () => {
+            allInput.forEach(input => {
+                if (input.value != "") {
+                    form.classList.add('thirdActive');
+                } else {
+                    form.classList.remove('thirdActive');
+                }
+            })
+        })
+
+        nextBtn3.addEventListener("click", () => {
+            allInput.forEach(input => {
+                if (input.value != "") {
+                    form.classList.add('fourthActive');
+                } else {
+                    form.classList.remove('fourthActive');
+                }
+            })
+        })
+
+        nextBtn4.addEventListener("click", () => {
+            allInput.forEach(input => {
+                if (input.value != "") {
+                    form.classList.add('fifthActive');
+                } else {
+                    form.classList.remove('fifthActive');
+                }
+            })
+        })
+
+        nextBtn5.addEventListener("click", () => {
+            allInput.forEach(input => {
+                if (input.value != "") {
+                    form.classList.add('sixthActive');
+                } else {
+                    form.classList.remove('sixthActive');
+                }
+            })
+        })
+
+        nextBtn6.addEventListener("click", () => {
+            allInput.forEach(input => {
+                if (input.value != "") {
+                    form.classList.add('seventhActive');
+                } else {
+                    form.classList.remove('seventhActive');
+                }
+            })
+        })
+
+        nextBtn7.addEventListener("click", () => {
+            allInput.forEach(input => {
+                if (input.value != "") {
+                    form.classList.add('eighthActive');
+                } else {
+                    form.classList.remove('eighthActive');
+                }
+            })
+        })
+
+        nextBtn8.addEventListener("click", () => {
+            allInput.forEach(input => {
+                if (input.value != "") {
+                    form.classList.add('ninthActive');
+                } else {
+                    form.classList.remove('ninthActive');
+                }
+            })
+        })
+
+        nextBtn9.addEventListener("click", () => {
+            allInput.forEach(input => {
+                if (input.value != "") {
+                    form.classList.add('tenthActive');
+                } else {
+                    form.classList.remove('tenthActive');
+                }
+            })
+        })
+
+        backBtn.addEventListener("click", () => {
+            form.classList.remove('secActive');   
+        });
+
+        backBtn2.addEventListener("click", () => {
+            form.classList.remove('thirdActive');   
+        });
+
+        backBtn3.addEventListener("click", () => {
+            form.classList.remove('fourthActive');   
+        });
+
+        backBtn4.addEventListener("click", () => {
+            form.classList.remove('fifthActive');   
+        });
+
+        backBtn5.addEventListener("click", () => {
+            form.classList.remove('sixthActive');   
+        });
+
+        backBtn6.addEventListener("click", () => {
+            form.classList.remove('seventhActive');   
+        });
+
+        backBtn7.addEventListener("click", () => {
+            form.classList.remove('eighthActive');   
+        });
+
+        backBtn8.addEventListener("click", () => {
+            form.classList.remove('ninthActive');   
+        });
+
+        backBtn9.addEventListener("click", () => {
+            form.classList.remove('tenthActive');   
+        });
+
+        // function nextContainer() {
+        //     if (form.classList.contains('secActive')) {
+        //         form.classList.remove('secActive');
+        //         form.classList.add('thirdActive');
+        //     } else if (form.classList.contains('thirdActive')) {
+        //         form.classList.remove('thirdActive');
+        //         form.classList.add('fourthActive');
+        //     } else if (form.classList.contains('fourthActive')) {
+        //         form.classList.remove('fourthActive');
+        //         form.classList.add('fifthActive');
+        //     } else if (form.classList.contains('fifthActive')) {
+        //         form.classList.remove('fifthActive');
+        //         form.classList.add('sixthActive');
+        //     } else if (form.classList.contains('sixthActive')) {
+        //         form.classList.remove('sixthActive');
+        //         form.classList.add('seventhActive');
+        //     } else if (form.classList.contains('seventhActive')) {
+        //         form.classList.remove('seventhActive');
+        //         form.classList.add('eighthActive');
+        //     } else if (form.classList.contains('eighthActive')) {
+        //         form.classList.remove('eighthActive');
+        //         form.classList.add('ninthActive');
+        //     }
+        // }
+
+        // function prevContainer() {
+        //     if (form.classList.contains('thirdActive')) {
+        //         form.classList.remove('thirdActive');
+        //         form.classList.add('secActive');
+        //     } else if (form.classList.contains('fourthActive')) {
+        //         form.classList.remove('fourthActive');
+        //         form.classList.add('thirdActive');
+        //     } else if (form.classList.contains('fifthActive')) {
+        //         form.classList.remove('fifthActive');
+        //         form.classList.add('fourthActive');
+        //     } else if (form.classList.contains('sixthActive')) {
+        //         form.classList.remove('sixthActive');
+        //         form.classList.add('fifthActive');
+        //     } else if (form.classList.contains('seventhActive')) {
+        //         form.classList.remove('seventhActive');
+        //         form.classList.add('sixthActive');
+        //     } else if (form.classList.contains('eighthActive')) {
+        //         form.classList.remove('eighthActive');
+        //         form.classList.add('seventhActive');
+        //     } else if (form.classList.contains('ninthActive')) {
+        //         form.classList.remove('ninthActive');
+        //         form.classList.add('eighthActive');
+        //     }
+        // }
+
+
+    </script>
+
+    
+
+    
+
+</body>
+</html>
