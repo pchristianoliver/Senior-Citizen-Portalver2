@@ -248,6 +248,10 @@ transform: translateX(-100%);
     color: #333;
 }
 
+.summary{
+    display: inline-block;
+}
+
 .container form .semi-title{
     display: block;
     font-size: 16px;
@@ -263,22 +267,13 @@ transform: translateX(-100%);
     flex-wrap: wrap;
 }
 
-.container form .summary{
+
+.container form .form.form.tenth .fields-sum{
+    display: inline-flex;
+    align-items: center;
     flex-direction: row;
-    margin: 10px;
-}
-
-.container form .fields-sum{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
     border: 1px solid #aaa;
-}
-
-.container form .fields-sum{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    margin-top: 5px;
 }
 
 form .fields .input-field{

@@ -54,16 +54,16 @@
                         
                         <div class="input-field-small">
                             <label for="month">Birth Month:</label>
-                            <select name="monthDOB" id="birthMonth" name="month" required>
-                                <option value="1">January</option>
-                                <option value="2">February</option>
-                                <option value="3">March</option>
-                                <option value="4">April</option>
-                                <option value="5">May</option>
-                                <option value="6">June</option>
-                                <option value="7">July</option>
-                                <option value="8">August</option>
-                                <option value="9">September</option>
+                            <select name="monthDOB" id="monthDOB" name="month" required>
+                                <option value="01">January</option>
+                                <option value="02">February</option>
+                                <option value="03">March</option>
+                                <option value="04">April</option>
+                                <option value="05">May</option>
+                                <option value="06">June</option>
+                                <option value="07">July</option>
+                                <option value="08">August</option>
+                                <option value="09">September</option>
                                 <option value="10">October</option>
                                 <option value="11">November</option>
                                 <option value="12">December</option>
@@ -72,12 +72,12 @@
 
                         <div class="input-field-small">
                             <label for="day">Day:</label>
-                            <select name="dayDOB" id="birthDay" name="day" required></select>
+                            <select name="dayDOB" id="dayDOB" name="day" required></select>
                         </div>
     
                         <div class="input-field-small">
                             <label for="year">Year:</label>
-                            <select name="yearDOB" id="birthYear" name="year" onclick="calculateAge()" ></select>
+                            <select name="yearDOB" id="yearDOB" name="year" onclick="calculateAge()" ></select>
                         </div>
 
                         <i id="clickableAwesomeFont" style="color: rgb(51, 153, 85);" class="fa-solid fa-circle-check fa-fade"></i>
@@ -85,12 +85,12 @@
 
                         <div class="input-field">
                             <label  class="text-box">Birth Place:</label>
-                            <input id=birthPlace name="birthPlace" type="text" placeholder="Enter your birth place" required>
+                            <input id="birthPlace" name="birthPlace" type="text" placeholder="Enter your birth place" required>
                         </div>
                         
                         <div class="input-field">
-                            <label class="text-box"> Sex:</label>
-                            <select name="gender" id="selectFormGender" >
+                            <label class="text-box"> Gender:</label>
+                            <select name="selectFormGender" id="selectFormGender" >
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                             </select>
@@ -98,7 +98,7 @@
 
                         <div class="input-field">
                             <label class="text-box">Marital Status</label>
-                            <select name="marital-status" id="selectFormMarital" >
+                            <select name="selectFormMarital" id="selectFormMarital" >
                                 <option value="Single">Single</option>
                                 <option value="Married">Married</option>
                                 <option value="Widow/Widower">Widow/Widower</option>
@@ -909,39 +909,47 @@
             <div class="form tenth">
                 <span class="title">Summary</span> 
                 <div class="summary">
-                                
-                    <div class="fields-sum-title">
-                        <span>Complete Name</span>
-                    </div>
-                        <div class="fields-sum">
-                            <div class="input-field-sum">
-                                <label>Last Name</label>
-                                <input id="summaryLastName" name="summaryLastName" type="text" disabled readonly></span>
-                            </div>
-                            <div class="input-field-sum">
-                                <label>First Name</label>
-                                <input id="summaryFirstName" name="summaryFirstName" type="text" disabled readonly>
-                            </div>
-                            <div class="input-field-sum">
-                                <label>Middle Name</label>
-                                <input id="summaryMiddleName" name="summaryMiddleName" type="text" disabled readonly>
-                            </div>
-                            <div class="input-field-sum">
-                                <label>Extension</label>
-                                <input id="summaryNameExtension" name="summaryNameExtension" type="text" disabled readonly>
-                            </div>
+                    <div class="fields-sum">
+                        <div class="input-field-sum">
+                            <label>Last Name</label>
+                            <input id="summaryLastName" name="summaryLastName" type="text" disabled readonly></span>
                         </div>
+                        <div class="input-field-sum">
+                            <label>First Name</label>
+                            <input id="summaryFirstName" name="summaryFirstName" type="text" disabled readonly>
+                        </div>
+                        <div class="input-field-sum">
+                            <label>Middle Name</label>
+                            <input id="summaryMiddleName" name="summaryMiddleName" type="text" disabled readonly>
+                        </div>
+                        <div class="input-field-sum">
+                            <label>Extension</label>
+                            <input id="summaryNameExtension" name="summaryNameExtension" type="text" disabled readonly>
+                        </div>
+                    </div>
 
-                    <div class="fields-sum-title">
-                        <span>Birth Date</span>
-                    </div>
-                        <div class="fields-sum">
-                            <div class="input-field-sum">
-                                <label>Last Name</label>
-                                <input id="summaryLastName" name="summaryLastName" type="text" disabled readonly></span>
-                            </div>
+                    <div class="fields-sum">
+                        <div class="input-field-sum">
+                            <label>Birth Date</label>
+                            <input id="summarybirthDate" name="summarybirthDate" type="text" disabled readonly></span>
+                        </div>
+                        <div class="input-field-sum">
+                            <label>Birth Place</label>
+                            <input id="summarybirthPlace" name="summarybirthPlace" type="text" disabled readonly></span>
                         </div>
                     </div>
+
+                    <div class="fields-sum">
+                        <div class="input-field-sum">
+                            <label>Gender</label>
+                            <input id="summaryGender" name="summaryGender" type="text" disabled readonly></span>
+                        </div>
+                        <div class="input-field-sum">
+                            <label>Marital Status</label>
+                            <input id="summaryMaritalStatus" name="summaryMaritalStatus" type="text" disabled readonly></span>
+                        </div>
+                    </div>
+
                 </div>
 
                     
@@ -960,12 +968,24 @@
             const firstName = document.getElementById('firstName').value;
             const middleName = document.getElementById('middleName').value;
             const nameExtension = document.getElementById('selectFormEXT').value;
+            const monthDOB = document.getElementById('monthDOB').value;
+            const dayDOB = document.getElementById('dayDOB').value;
+            const yearDOB = document.getElementById('yearDOB').value;
+            const birthPlace = document.getElementById('birthPlace').value;
+            const selectFormGender = document.getElementById('selectFormGender').value;
+            const selectFormMarital = document.getElementById('selectFormMarital').value;
 
             // Update the summary section in the second form
             document.getElementById('summaryLastName').value = lastName;
             document.getElementById('summaryFirstName').value =  firstName;
             document.getElementById('summaryMiddleName').value =  middleName;
             document.getElementById('summaryNameExtension').value = nameExtension;
+            document.getElementById('summarybirthDate').value = monthDOB + "/" + dayDOB + "/" + yearDOB;
+            document.getElementById('summarybirthPlace').value = birthPlace;
+            document.getElementById('summaryGender').value = selectFormGender;
+            document.getElementById('summaryMaritalStatus').value = selectFormMarital;
+
+
         };
 
 
@@ -1040,9 +1060,9 @@
         });
 
         // FOR DATE PICKER
-        const monthSelect = document.getElementById("birthMonth");
-        const daySelect = document.getElementById("birthDay");
-        const yearSelect = document.getElementById("birthYear");
+        const monthSelect = document.getElementById("monthDOB");
+        const daySelect = document.getElementById("dayDOB");
+        const yearSelect = document.getElementById("yearDOB");
 
         // Function to dynamically generate the options for the days based on the selected month
         function generateDays() {
@@ -1084,9 +1104,9 @@
 
         //FOR AGE CALCULATE
         function calculateAge() {
-            var birthMonth = document.getElementById('birthMonth').value;
-            var birthDay = document.getElementById('birthDay').value;
-            var birthYear = document.getElementById('birthYear').value;
+            var birthMonth = document.getElementById('monthDOB').value;
+            var birthDay = document.getElementById('dayDOB').value;
+            var birthYear = document.getElementById('yearDOB').value;
             
             var today = new Date();
             var birthDate = new Date(birthYear, birthMonth - 1, birthDay);
