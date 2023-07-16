@@ -252,6 +252,12 @@ transform: translateX(-100%);
     display: inline-block;
 }
 
+.first-page, .second-page{
+    margin-bottom: 5px;
+    border: 1px ridge #2e2e2e;
+    padding: 3px;
+}
+
 .container form .semi-title{
     display: block;
     font-size: 16px;
@@ -272,7 +278,6 @@ transform: translateX(-100%);
     display: inline-flex;
     align-items: center;
     flex-direction: row;
-    border: 1px solid #aaa;
     margin-top: 5px;
 }
 
@@ -289,6 +294,7 @@ form .fields-sum .input-field-sum{
     flex-direction: column;
     margin: 4px;
 }
+
 
 form .fields .input-field-small{
     display:flex;

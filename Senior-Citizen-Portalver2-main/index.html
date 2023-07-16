@@ -108,7 +108,7 @@
 
                         <div class="input-field">
                             <label  class="text-box">Contact Number</label>
-                            <input id="number" name="contactNumber" type="tel" placeholder="Enter your contact number" >
+                            <input id="contactNumber" name="contactNumber" type="tel" placeholder="Enter your contact number" >
                         </div>
 
                         <div class="input-field">
@@ -167,17 +167,17 @@
                     <div class="fields">
                         <div class="input-field">
                             <label class="text-box">Region</label>
-                            <input name="region" type="text" placeholder="CALABARZON" disabled>
+                            <input value="CALABARZON" name="region" id="region" type="text" placeholder="CALABARZON" disabled>
                         </div>
 
                         <div class="input-field">
                             <label class="text-box">Province</label>
-                            <input name="region" type="text" placeholder="LAGUNA" disabled>
+                            <input value="LAGUNA" name="province" id="province" type="text" placeholder="LAGUNA" disabled>
                         </div>
 
                         <div class="input-field">
                             <label class="text-box">City</label>
-                            <input name="region" type="text" placeholder="BIÑAN CITY" disabled>
+                            <input value="BIÑAN CITY" name="city" id="city" type="text" placeholder="BIÑAN CITY" disabled>
                         </div>
 
                         <div class="input-field">
@@ -188,12 +188,12 @@
 
                         <div class="input-field-big">
                             <label class="text-box">Residence (House No./Block/Lot)</label>
-                            <input name="residence" type="text" placeholder="Enter your(House No./Block/Lot)">
+                            <input name="residence" id="residence" type="text" placeholder="Enter your(House No./Block/Lot)">
                         </div>
 
                         <div class="input-field-big">
                             <label class="text-box">Street (Zone/Purok/Sitio) </label>
-                            <input name="street" type="text" placeholder="Enter your street">
+                            <input name="street" id="street" type="text" placeholder="Enter your street">
                         </div>
                     </div>
 
@@ -909,46 +909,86 @@
             <div class="form tenth">
                 <span class="title">Summary</span> 
                 <div class="summary">
-                    <div class="fields-sum">
-                        <div class="input-field-sum">
-                            <label>Last Name</label>
-                            <input id="summaryLastName" name="summaryLastName" type="text" disabled readonly></span>
+                    <div class="first-page">
+                        <span class="semi-title">Personal Details</p>
+                        <div class="fields-sum">
+                            <div class="input-field-sum">
+                                <label>Last Name</label>
+                                <input id="summaryLastName" name="summaryLastName" type="text" disabled readonly></span>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>First Name</label>
+                                <input id="summaryFirstName" name="summaryFirstName" type="text" disabled readonly>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>Middle Name</label>
+                                <input id="summaryMiddleName" name="summaryMiddleName" type="text" disabled readonly>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>Extension</label>
+                                <input id="summaryNameExtension" name="summaryNameExtension" type="text" disabled readonly>
+                            </div>
                         </div>
-                        <div class="input-field-sum">
-                            <label>First Name</label>
-                            <input id="summaryFirstName" name="summaryFirstName" type="text" disabled readonly>
+    
+                        <div class="fields-sum">
+                            <div class="input-field-sum">
+                                <label>Birth Date</label>
+                                <input id="summarybirthDate" name="summarybirthDate" type="text" disabled readonly></span>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>Birth Place</label>
+                                <input id="summarybirthPlace" name="summarybirthPlace" type="text" disabled readonly></span>
+                            </div>
                         </div>
-                        <div class="input-field-sum">
-                            <label>Middle Name</label>
-                            <input id="summaryMiddleName" name="summaryMiddleName" type="text" disabled readonly>
-                        </div>
-                        <div class="input-field-sum">
-                            <label>Extension</label>
-                            <input id="summaryNameExtension" name="summaryNameExtension" type="text" disabled readonly>
+    
+                        <div class="fields-sum">
+                            <div class="input-field-sum">
+                                <label>Contact Number</label>
+                                <input id="summaryContactNumber" name="summaryContactNumber" type="text" disabled readonly></span>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>Gender</label>
+                                <input id="summaryGender" name="summaryGender" type="text" disabled readonly></span>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>Marital Status</label>
+                                <input id="summaryMaritalStatus" name="summaryMaritalStatus" type="text" disabled readonly></span>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>Housing Condition</label>
+                                <input id="summaryHousingCondition" name="summaryHousingCondition" type="text" disabled readonly></span>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>If rental, who pays rent:</label>
+                                <input id="summaryRentalPayee" name="summaryRentalPayee" type="text" disabled readonly></span>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>Rental Amount:</label>
+                                <input id="summaryRentalAmount" name="summaryRentalAmount" type="text" disabled readonly></span>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="fields-sum">
-                        <div class="input-field-sum">
-                            <label>Birth Date</label>
-                            <input id="summarybirthDate" name="summarybirthDate" type="text" disabled readonly></span>
-                        </div>
-                        <div class="input-field-sum">
-                            <label>Birth Place</label>
-                            <input id="summarybirthPlace" name="summarybirthPlace" type="text" disabled readonly></span>
+                    <div class="second-page">
+                        <span class="semi-title">Address</p>
+                        <div class="fields-sum">
+                            <div class="input-field-sum">
+                                <label>Complete Address</label>
+                                <input style="width: 750px;" id="summaryAddress" name="summaryAddress" type="text" disabled readonly>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="fields-sum">
-                        <div class="input-field-sum">
-                            <label>Gender</label>
-                            <input id="summaryGender" name="summaryGender" type="text" disabled readonly></span>
-                        </div>
-                        <div class="input-field-sum">
-                            <label>Marital Status</label>
-                            <input id="summaryMaritalStatus" name="summaryMaritalStatus" type="text" disabled readonly></span>
-                        </div>
-                    </div>
+                    <button type="button" class="backBtn9">
+                        <i class="uil uil-navigator"></i>
+                        <span class="btnText">Back</span>
+                    </button>
+
+                    <button type="button" class="submitBtn">
+                        <span class="btnText">Submit</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                    
 
                 </div>
 
@@ -972,8 +1012,19 @@
             const dayDOB = document.getElementById('dayDOB').value;
             const yearDOB = document.getElementById('yearDOB').value;
             const birthPlace = document.getElementById('birthPlace').value;
+            const contactNumber = document.getElementById('contactNumber').value;
             const selectFormGender = document.getElementById('selectFormGender').value;
             const selectFormMarital = document.getElementById('selectFormMarital').value;
+            const housingCondition = document.getElementById('housingCondition').value;
+            const rentalPayee = document.getElementById('rentalPayee').value;
+            const rentalAmount = document.getElementById('rentalAmount').value;
+
+            const region = document.getElementById('region').value;
+            const province = document.getElementById('province').value;
+            const city = document.getElementById('city').value;
+            const barangay = document.getElementById('stacked-barangay').value;
+            const residence = document.getElementById('residence').value;
+            const street = document.getElementById('street').value;
 
             // Update the summary section in the second form
             document.getElementById('summaryLastName').value = lastName;
@@ -982,8 +1033,13 @@
             document.getElementById('summaryNameExtension').value = nameExtension;
             document.getElementById('summarybirthDate').value = monthDOB + "/" + dayDOB + "/" + yearDOB;
             document.getElementById('summarybirthPlace').value = birthPlace;
+            document.getElementById('summaryContactNumber').value = contactNumber;
             document.getElementById('summaryGender').value = selectFormGender;
             document.getElementById('summaryMaritalStatus').value = selectFormMarital;
+            document.getElementById('summaryHousingCondition').value = housingCondition;
+            document.getElementById('summaryRentalPayee').value = rentalPayee;
+            document.getElementById('summaryRentalAmount').value = rentalAmount;
+            document.getElementById('summaryAddress').value = residence + "," +  street + "," + barangay + "," + city + "," + province + "," + region;
 
 
         };
