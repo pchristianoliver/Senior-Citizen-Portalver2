@@ -185,7 +185,6 @@ height: 490px;
 }
 
 .health-wellness{
-    height: 490px;
     margin-left: 23px;
 }
 
@@ -223,6 +222,8 @@ transform: translateX(-100%);
 opacity: 0;
 pointer-events: none;
 transform: translateX(200%);
+overflow-y: scroll;
+height: 490px;
 
 }
 
@@ -252,7 +253,7 @@ transform: translateX(-100%);
     display: inline-block;
 }
 
-.first-page, .second-page{
+.first-page, .second-page, .third-page{
     margin-bottom: 5px;
     border: 1px ridge #2e2e2e;
     padding: 3px;
