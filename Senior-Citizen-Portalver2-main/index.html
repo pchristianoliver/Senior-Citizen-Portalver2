@@ -713,7 +713,7 @@
 
                         <div class="input-field">
                             <label>Estimated Monthly Support</label>
-                            <input id="estimated-monthly-support-children" name="estimated-monthly-support-children" type="text" placeholder="Estimated Monthly Support" disabled>
+                            <input id="estimatedMonthlySupportChildren" name="estimatedMonthlySupportChildren" type="text" placeholder="Estimated Monthly Support" disabled>
                         </div>  
                         
                     </div>
@@ -727,7 +727,7 @@
 
                         <div class="input-field">
                             <label>Estimated Monthly Support</label>
-                            <input id="estimated-monthly-support-other" name="estimated-monthly-support-other" type="text" placeholder="Estimated Monthly Support" disabled>
+                            <input id="estimatedMonthlySupportOther" name="estimatedMonthlySupportOther" type="text" placeholder="Estimated Monthly Support" disabled>
                         </div>
 
                     </div>
@@ -1282,22 +1282,22 @@
                     <div class="sixth-page">
                         <span class="semi-title">Present Source/s of Income</span>
                         <h5 style="margin-top: 10px;">What kind of pension/s do you have?</h5>
-                        <!-- <div class="fields-sum">
-                            <div class="input-field-sum" style="font-size: 11px; margin-top: 5px;">
-                                <input type="checkbox" id="pensioner" disabled> Pensioner
-                                <input type="checkbox" id="nonPensioner" disabled> Non-Pensioner
-                                <input type="checkbox" id="GSISPensioner" disabled> GSIS Pensioner
-                                <input type="checkbox" id="SSSPensioner" disabled> SSS Pensioner
-                            </div>
-                        </div> -->
+                        
+                        <div class="input-field-sum" style="font-size: 11px; margin: 5px 0 0 5px;">
+                            <input type="checkbox" id="pensioner" disabled> Pensioner
+                            <input type="checkbox" id="nonPensioner" disabled> Non-Pensioner
+                            <input type="checkbox" id="GSISPensioner" disabled> GSIS Pensioner
+                            <input type="checkbox" id="SSSPensioner" disabled> SSS Pensioner
+                        </div>
+                        
                         <div class="fields-sum">
                             <div class="input-field-sum">
-                                <label>Nature of Employent/Busniess</label>
+                                <label>Nature of Employent</label>
                                 <input id="summaryNatureOfEmployment" name="summaryNatureOfEmployment" type="text" disabled readonly>
                             </div>
                             <div class="input-field-sum">
                                 <label>Estimated Capital</label>
-                                <input id="summaryEstiatedCapital" name="summaryEstiatedCapital" type="text" disabled readonly>
+                                <input id="summaryEstimatedCapital" name="summaryEstimatedCapital" type="text" disabled readonly>
                             </div>
                             <div class="input-field-sum">
                                 <label>Estimated Monthly Sales</label>
@@ -1306,6 +1306,14 @@
                             <div class="input-field-sum">
                                 <label>Estimated Monthly Income</label>
                                 <input id="sumamryEstimatedMonthlyIncome" name="sumamryEstimatedMonthlyIncome" type="text" disabled readonly>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>Support from Children</label>
+                                <input id="summaryEstimatedMonthlySupportChildren" name="summaryEstimatedMonthlySupportChildren" type="text" disabled readonly>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>Support from OTHERS</label>
+                                <input id="sumamryEstimatedMonthlySupportOther" name="sumamryEstimatedMonthlySupportOther" type="text" disabled readonly>
                             </div>
                         </div>
                             
@@ -1448,6 +1456,12 @@
 
             // Present Source of Income
             
+            const natureOfEmployment = document.getElementById('natureOfEmployment').value;
+            const estimatedCapital = document.getElementById('estimatedCapital').value;
+            const estimatedMonthlySales = document.getElementById('estimatedMonthlySales').value;
+            const estimatedMonthlyIncome = document.getElementById('estimatedMonthlyIncome').value;
+            const estimatedMonthlySupportChildren = document.getElementById('estimatedMonthlySupportChildren').value;
+            const estimatedMonthlySupportOther = document.getElementById('estimatedMonthlySupportOther').value;
 
             // Update the summary section in the second form
             //Personal Details
@@ -1554,6 +1568,13 @@
             document.getElementById('summaryYearsOfEmployment').value = yearsOfEmployment;
             document.getElementById('summaryReasonForLeaving').value = reasonForLeaving;
 
+            // Present Source of Income
+            document.getElementById('summaryNatureOfEmployment').value = natureOfEmployment;
+            document.getElementById('summaryEstimatedCapital').value = estimatedCapital;
+            document.getElementById('summaryEstimatedMonthlySales').value = estimatedMonthlySales;
+            document.getElementById('sumamryEstimatedMonthlyIncome').value = estimatedMonthlyIncome;
+            document.getElementById('summaryEstimatedMonthlySupportChildren').value = estimatedMonthlySupportChildren;
+            document.getElementById('sumamryEstimatedMonthlySupportOther').value = estimatedMonthlySupportOther;
         };
 
 
@@ -1574,8 +1595,8 @@
         // Financially Support Checkbox
         const checkbox2 = document.getElementById("checkFormSupportChildren");
         const checkbox3 = document.getElementById("checkFormSupportOther");
-        const emsChildren = document.getElementById("estimated-monthly-support-children");
-        const emsOther = document.getElementById("estimated-monthly-support-other");
+        const emsChildren = document.getElementById("estimatedMonthlySupportChildren");
+        const emsOther = document.getElementById("estimatedMonthlySupportOther");
 
         checkbox2.addEventListener('change', function() {
             if (checkbox2.checked){

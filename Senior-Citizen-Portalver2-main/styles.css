@@ -327,6 +327,7 @@ form .fields .input-field-big{
     color: #2e2e2e;
     font-style: italic;
     margin-top: 5px;
+    width: 200px;
 }
 
 .input-field-small label{
