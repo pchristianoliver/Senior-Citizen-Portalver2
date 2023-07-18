@@ -253,7 +253,9 @@ transform: translateX(-100%);
     display: inline-block;
 }
 
-.first-page, .second-page, .third-page, .fourth-page{
+
+
+.first-page, .second-page, .third-page, .fourth-page, .fifth-page, .sixth-page{
     margin-bottom: 5px;
     border: 1px ridge #2e2e2e;
     padding: 3px;

@@ -566,42 +566,42 @@
                     <div class="fields">
                         <div class="input-field">
                             <label class="text-box">Elementary</label>
-                            <input name="elementary" type="text" placeholder="Elementary" >
+                            <input name="elementary" id="elementary" type="text" placeholder="Elementary" >
                         </div>
 
                         <div class="input-field">
                             <label class="text-box">School Year</label>
-                            <input name="elem-SY" type="text" placeholder="School Year" >
+                            <input name="elemSY" id="elemSY" type="text" placeholder="School Year" >
                         </div>
 
                         <div class="input-field">
                             <label class="text-box">Secondary</label>
-                            <input name="secondary" type="text" placeholder="Secondary" >
+                            <input name="secondary" id="secondary" type="text" placeholder="Secondary" >
                         </div>
 
                         <div class="input-field">
                             <label class="text-box">School Year</label>
-                            <input name="secondary-SY" type="text" placeholder="School Year" >
+                            <input name="secondarySY" id="secondarySY" type="text" placeholder="School Year" >
                         </div>
 
                         <div class="input-field">
                             <label class="text-box">College</label>
-                            <input name="college" type="text" placeholder="College" >
+                            <input name="college" id="college" type="text" placeholder="College" >
                         </div>
 
                         <div class="input-field">
                             <label class="text-box">School Year</label>
-                            <input name="college-SY" type="text" placeholder="School Year" >
+                            <input name="collegeSY" id="collegeSY" type="text" placeholder="School Year" >
                         </div>
 
                         <div class="input-field">
                             <label class="text-box">Graduate Studies</label>
-                            <input name="graduateStudies" type="text" placeholder="Graduate Studies" >
+                            <input name="graduateStudies" id="graduateStudies" type="text" placeholder="Graduate Studies" >
                         </div>
 
                         <div class="input-field">
                             <label class="text-box">School Year</label>
-                            <input name="graduateStudies-SY" type="text" placeholder="School Year" >
+                            <input name="graduateStudiesSY" id="graduateStudiesSY" type="text" placeholder="School Year" >
                         </div>
                     </div>
                     
@@ -610,32 +610,33 @@
                     <div class="fields">
                         <div class="input-field">
                             <label class="text-box">Last Employed</label>
-                            <input name="last-employed" type="text" placeholder="Last Employed" >
+                            <input name="lastEmployed" id="lastEmployed" type="text" placeholder="Last Employed" >
                         </div>
 
                         <div class="input-field">
                             <label class="text-box">Last Position</label>
-                            <input name="last-position" type="text" placeholder="Last Position" >
+                            <input name="lastPosition" id="lastPosition" type="text" placeholder="Last Position" >
                         </div>
 
                         <div class="input-field-big">
                             <label class="text-box">Name of Company</label>
-                            <input name="name-of-company" type="text" placeholder="Name of Company" >
+                            <input name="nameOfCompany" id="nameOfCompany" type="text" placeholder="Name of Company" >
                         </div>
 
                         <div class="input-field">
                             <label class="text-box">Years in Service</label>
-                            <input name="years-in-service" type="text" placeholder="Years in Service" >
+                            <input name="yearsInService" id="yearsInService" type="text" placeholder="Years in Service" >
                         </div>
 
                         <div class="input-field">
                             <label class="text-box">Years of Employment</label>
-                            <input name="years-of-employment" type="text" placeholder="Years of Employment" >
+                            <input name="yearsOfEmployment" id="yearsOfEmployment" type="text" placeholder="Years of Employment" >
                         </div>
 
                         <div class="input-field">
                             <label>Reason for Leaving</label>
-                            <select name="reason-for-leaving" id="reason-for-leaving" >
+                            <select name="reasonForLeaving" id="reasonForLeaving" >
+                                <option value=""></option>
                                 <option value="End of Contract">End of Contract</option>
                                 <option value="Resigned">Resigned</option>
                                 <option value="Terminated">Terminated</option>
@@ -683,22 +684,22 @@
                     <div class="fields">
                         <div class="input-field">
                             <label>Nature of Employment/Business</label>
-                            <input name="nature-employment-business" type="text" placeholder="Nature of Employment/Business">
+                            <input name="natureOfEmployment" id="natureOfEmployment" type="text" placeholder="Nature of Employment/Business">
                         </div>
 
                         <div class="input-field">
                             <label>Estimated Capital</label>
-                            <input name="estimated-captial" type="text" placeholder="Estimated Capital">
+                            <input name="estimatedCapital" id="estimatedCapital" type="text" placeholder="Estimated Capital">
                         </div>
 
                         <div class="input-field">
                             <label>Estimated Monthly Sales</label>
-                            <input name="estimated-monthly-sales" type="text" placeholder="Estimated Monthly Sales">
+                            <input name="estimatedMonthlySales" id="estimatedMonthlySales" type="text" placeholder="Estimated Monthly Sales">
                         </div>
 
                         <div class="input-field">
                             <label>Estimated Monthly Income</label>
-                            <input name="estimated-monthly-income" type="text" placeholder="Estimated Monthly Income">
+                            <input name="estimatedMonthlyIncome" id="estimatedMonthlyIncome" type="text" placeholder="Estimated Monthly Income">
                         </div>
                     </div>
 
@@ -982,7 +983,7 @@
                     </div>
 
                     <div class="second-page">
-                        <span class="semi-title">Address</p>
+                        <span class="semi-title">Address</span>
                         <div class="fields-sum">
                             <div class="input-field-sum">
                                 <label>Complete Address</label>
@@ -1227,6 +1228,89 @@
                         
                     </div>
 
+                    <div class="fifth-page">
+                        <span class="semi-title">Education Attainment</span>
+                        <div class="fields-sum">
+                            <div class="input-field-sum">
+                                <label>Elementary</label>
+                                <input id="summaryElementary" name="summaryElementary" type="text" disabled readonly>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>Seconday</label>
+                                <input id="summarySecondary" name="summarySecondary" type="text" disabled readonly>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>College</label>
+                                <input id="summaryCollege" name="summaryCollege" type="text" disabled readonly>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>Graduate Studies</label>
+                                <input id="summaryGraduateStudies" name="summaryGraduateStudies" type="text" disabled readonly>
+                            </div>                      
+                        </div>
+
+                        <span class="semi-title">Education Attainment</span>
+                        <div class="fields-sum">
+                            <div class="input-field-sum">
+                                <label>Last Employed</label>
+                                <input id="summaryLastEmployed" name="summaryLastEmployed" type="text" disabled readonly>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>Last Position</label>
+                                <input id="summaryLastPosition" name="summaryLastPosition" type="text" disabled readonly>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>Name of Company</label>
+                                <input id="summaryNameOfCompany" name="summaryNameOfCompany" type="text" disabled readonly>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>Years in Service</label>
+                                <input id="summaryYearInService" name="summaryYearInService" type="text" disabled readonly>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>Years of Employment</label>
+                                <input id="summaryYearsOfEmployment" name="summaryYearsOfEmployment" type="text" disabled readonly>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>Reason for Leaving</label>
+                                <input id="summaryReasonForLeaving" name="summaryReasonForLeaving" type="text" disabled readonly>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="sixth-page">
+                        <span class="semi-title">Present Source/s of Income</span>
+                        <h5 style="margin-top: 10px;">What kind of pension/s do you have?</h5>
+                        <!-- <div class="fields-sum">
+                            <div class="input-field-sum" style="font-size: 11px; margin-top: 5px;">
+                                <input type="checkbox" id="pensioner" disabled> Pensioner
+                                <input type="checkbox" id="nonPensioner" disabled> Non-Pensioner
+                                <input type="checkbox" id="GSISPensioner" disabled> GSIS Pensioner
+                                <input type="checkbox" id="SSSPensioner" disabled> SSS Pensioner
+                            </div>
+                        </div> -->
+                        <div class="fields-sum">
+                            <div class="input-field-sum">
+                                <label>Nature of Employent/Busniess</label>
+                                <input id="summaryNatureOfEmployment" name="summaryNatureOfEmployment" type="text" disabled readonly>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>Estimated Capital</label>
+                                <input id="summaryEstiatedCapital" name="summaryEstiatedCapital" type="text" disabled readonly>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>Estimated Monthly Sales</label>
+                                <input id="summaryEstimatedMonthlySales" name="summaryEstimatedMonthlySales" type="text" disabled readonly>
+                            </div>
+                            <div class="input-field-sum">
+                                <label>Estimated Monthly Income</label>
+                                <input id="sumamryEstimatedMonthlyIncome" name="sumamryEstimatedMonthlyIncome" type="text" disabled readonly>
+                            </div>
+                        </div>
+                            
+                    </div>
+
                     <button type="button" class="backBtn9">
                         <i class="uil uil-navigator"></i>
                         <span class="btnText">Back</span>
@@ -1342,6 +1426,27 @@
             const notselectFormMarital5 = document.getElementById('notselectFormMarital5').value;
             const notlivingWithSCOccupation5 = document.getElementById('notlivingWithSCOccupation5').value;
 
+            // Educational Attainment
+
+            const elementary = document.getElementById('elementary').value;
+            const elemSY = document.getElementById('elemSY').value;
+            const secondary = document.getElementById('secondary').value;
+            const secondarySY = document.getElementById('secondarySY').value;
+            const college = document.getElementById('college').value;
+            const collegeSY = document.getElementById('collegeSY').value;
+            const graduateStudies = document.getElementById('graduateStudies').value;
+            const graduateStudiesSY = document.getElementById('graduateStudiesSY').value;
+
+            // Employment History
+
+            const lastEmployed = document.getElementById('lastEmployed').value;
+            const lastPostion = document.getElementById('lastPosition').value;
+            const nameOfCompany = document.getElementById('nameOfCompany').value;
+            const yearsInService = document.getElementById('yearsInService').value;
+            const yearsOfEmployment = document.getElementById('yearsOfEmployment').value;
+            const reasonForLeaving = document.getElementById('reasonForLeaving').value;
+
+            // Present Source of Income
             
 
             // Update the summary section in the second form
@@ -1434,6 +1539,21 @@
             document.getElementById('summaryNotlivingWithSCAge5').value = notlivingWithSCAge5;
             document.getElementById('summaryNotselectFormMarital5').value = notselectFormMarital5;
             document.getElementById('summaryNotlivingWithSCOccupation5').value = notlivingWithSCOccupation5;
+        
+            // Educational Attainment
+            document.getElementById('summaryElementary').value = elementary + " - " + elemSY;
+            document.getElementById('summarySecondary').value = secondary + " - " + secondarySY;
+            document.getElementById('summaryCollege').value = college + " - " + collegeSY;
+            document.getElementById('summaryGraduateStudies').value =  graduateStudies + " - " + graduateStudiesSY;
+        
+            // Employment History
+            document.getElementById('summaryLastEmployed').value = lastEmployed;
+            document.getElementById('summaryLastPosition').value = lastPostion;
+            document.getElementById('summaryNameOfCompany').value = nameOfCompany;
+            document.getElementById('summaryYearInService').value = yearsInService;
+            document.getElementById('summaryYearsOfEmployment').value = yearsOfEmployment;
+            document.getElementById('summaryReasonForLeaving').value = reasonForLeaving;
+
         };
 
 
